@@ -1,0 +1,629 @@
+
+<HTML>
+<HEAD>
+<TITLE>
+Psychedelic Mango              - ...and the flame still burns                      
+</TITLE>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF                          LINK=blue VLINK=blue MARGINHEIGHT=0 MARGINWIDTH=0 TOPMARGIN=0 LEFTMARGIN=0>
+<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR>
+<TD WIDTH=136 VALIGN=bottom>
+<!-- site logo -->
+<A HREF=default.asp><IMG SRC=images/odlogo2.gif WIDTH=136 HEIGHT=124 BORDER=0 ALT="The Open Diary"><BR></A>
+</TD>
+<TD ALIGN=center>
+<!-- begin ad space -->
+<TABLE WIDTH=590 BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR>
+<TD COLSPAN=3>
+<!-- masthead -->
+<SCRIPT LANGUAGE="JavaScript"><!--
+function MHPopup(url) {
+  var mhpopup = window.open(url,"wfpopup","scrollbars=yes,resizable=no,status=0,width=300,height=300");
+  if(!mhpopup.opener) mhpopup.opener = window;
+  mhpopup.focus();
+} // MHPopup
+// -->
+</SCRIPT>
+<MAP NAME="mhmapwf">
+<AREA SHAPE="RECT" HREF="http://www.womensforum.com/" COORDS="0,0,204,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/channels.html')" COORDS="205,0,333,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/contests.html')" COORDS="205,15,333,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/toppicks.html')" COORDS="336,0,464,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/interact.html')" COORDS="336,15,464,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/newsletters.html')" COORDS="467,0,595,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/aboutwf.html')" COORDS="467,15,595,29" TARGET="_parent">
+</MAP>
+<IMG SRC="http://www.opendiary.com/images/masthead-border-violethaze.gif" HEIGHT="30" WIDTH="600" BORDER="0" USEMAP="#mhmapwf"><BR CLEAR=ALL>
+<!-- end masthead -->
+</TD>
+</TR>
+<TR>
+<TD VALIGN=top ALIGN=right>
+<!-- begin 120 button -->
+<a href="http://www.commission-junction.com/track/track.dll?AID=193835&PID=654602&URL=http%3A%2F%2Fwww%2Ehalf%2Ecom" target="_top">
+<img src="http://www.commission-junction.com/banners/tracker.exe?PID=654602&AID=193835&banner=193835%2Egif" width="120" height="60" alt="Half.com: buy/sell used books, movies, music,games" border="0"></a>
+<!-- end 120 button -->
+</TD>
+<TD VALIGN=top ALIGN=center>
+<IMG SRC=images/advertiser.gif BORDER=0>
+</TD>
+<TD VALIGN=top>
+<!-- adslot start -->
+<!-- start DART 468x60 -->
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+	var ord = Math.floor(Math.random() * 1000000) + "?";
+	document.write('<IFRAME SRC="http://ad.doubleclick.net/adi/womensforum_opendiary.l90/;sz=468x60;ord=' + ord + '" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no">');
+	document.write('<' + 'SCRIPT language="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/womensforum_opendiary.l90/;abr=!ie;sz=468x60;ord=' + ord + '"><' + '/SCRIPT>');
+	document.write('</IFRAME>');
+//-->
+</SCRIPT>
+<NOSCRIPT>
+	<A HREF="http://ad.doubleclick.net/jump/womensforum_opendiary.l90/;sz=468x60;ord=[random_number]?">
+		<IMG SRC="http://ad.doubleclick.net/ad/womensforum_opendiary.l90/;sz=468x60;ord=[random_number]?" border=0 height="60" width="468">
+	</A>
+</NOSCRIPT>
+<!-- end DART 468x60 -->
+<!-- adslot1 end -->
+</TD>
+</TR>
+</TABLE>
+<!-- end ad space -->
+</TD>
+</TR>
+<TR>
+<TD WIDTH=136 ALIGN=left VALIGN=middle BGCOLOR=darkblue>&nbsp;</TD>
+<TD ALIGN=right BGCOLOR=darkblue><FONT FACE=arial COLOR=white SIZE=2><B>&nbsp;</B></FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN=2><IMG SRC=images/yellowline.gif WIDTH=100% HEIGHT=1 BORDER=0></TD>
+</TR>
+<TR>
+<TD COLSPAN=2 BGCOLOR=#EE82EE                         >
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100%>
+<TR>
+<TD>
+</TD>
+<TD ALIGN=right>
+<TABLE CELLSPACING=2 BGCOLOR=#EE82EE                         >
+<TR>
+
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=diarylist.asp?list=1&start=1&min=A&max=A><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">index</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=recent.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">recent</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=random.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">random</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=search.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">search</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=theme.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">theme</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=circles.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">circles</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=http://freemail.opendiary.com><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">mail</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=helpindex.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">help</SPAN></FONT></A><IMG SRC=images/1x1spacer.gif WIDTH=2></TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=136 BGCOLOR=#EE82EE                          VALIGN=top>
+<TABLE CELLPADDING=4>
+
+<TR><TD>
+<FORM ACTION="express.asp" METHOD="post">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR><TD ALIGN=right><FONT FACE=arial SIZE=2 COLOR=#483D8B><B>unlock my diary</B></FONT></TD></TR>
+<TR><TD ALIGN=left>
+<INPUT NAME="logstring" SIZE=14 MAXLENGTH=30>
+</TD></TR>
+<TR><TD ALIGN=left>
+<INPUT NAME="logpw" TYPE=password SIZE=14 MAXLENGTH=30>
+</TD></TR>
+<TR><TD ALIGN=left>
+<INPUT TYPE=image WIDTH=47 HEIGHT=18 BORDER=0 SRC=images/unlockit.gif>
+<INPUT TYPE=hidden NAME=localpage VALUE=/entrylist.asp?authorcode=A302542>
+</TD></TR>
+</TABLE>
+</FORM>
+</TD></TR>
+
+<TR><TD ALIGN=right><A HREF="default.asp"><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">main page</SPAN></FONT></A></TD></TR>
+<TR><TD ALIGN=right><A HREF="entrycalendar.asp?authorcode=A302542"><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">diary calendar</SPAN></FONT></A></TD></TR>
+<TR><TD ALIGN=right><A HREF="notelist.asp?authorcode=A302542"><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">read all notes</SPAN></FONT></A></TD></TR>
+
+<TR><TD></TD></TR>
+<TR><TD ALIGN=right>
+<FORM ACTION="express.asp" METHOD="post">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD ALIGN=right><FONT FACE=arial SIZE=2 COLOR=#483D8B><B>jump to a diary</B></FONT></TD></TR>
+<TR><TD ALIGN=right>
+<INPUT NAME="expressstring" SIZE=14 MAXLENGTH=20>
+</TD></TR>
+<TR><TD ALIGN=right>
+<INPUT TYPE="image" WIDTH=47 HEIGHT=18 BORDER=0 src="images/findit.gif">
+</TD></TR></TABLE>
+</FORM>
+</TD></TR>
+<TR><TD></TD></TR>
+<TR><TD ALIGN=right><A HREF=contact.asp><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">contact us</SPAN></FONT></A></TD></TR>
+<TR><TD><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P></TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=100% VALIGN=top>
+<!-- content -->
+<TABLE BORDER=0 CELLPADDING=6 WIDTH=100%>
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial", arial SIZE=3  COLOR=#DDA0DD>
+<B>...and the flame still burns                      
+<BR>
+<FONT FACE="Arial" , arial SIZE=2 COLOR=#DDA0DD>
+by Psychedelic Mango             </B>
+</TD>
+<TD ALIGN="right" VALIGN="top" NOWRAP>
+<B>
+<FONT FACE="Arial" , arial SIZE=2 COLOR=#DDA0DD>
+
+Location: Australia                     
+<br>
+<FONT FACE="Arial" , arial SIZE=2 COLOR=#DDA0DD>
+
+Age:&nbsp;15
+&nbsp;&nbsp;
+</B>
+</TD>
+</TR>
+</TABLE>
+<HR>
+<TABLE BORDER=0 CELLPADDING=2 WIDTH=100%>
+<TR>
+<TD VALIGN=top>
+<FONT FACE="Arial" , arial SIZE=2  COLOR="#EE82EE">
+<html><P>
+<center><P>
+<IMG SRC="http://www.psychoticickything.com/psychedelicmango2.jpg"><P>
+</center><P>
+<center><P>
+<IMG SRC="http://www.psychoticickything.com/psychedelicmango-pic.jpg"></center><P>
+<b><P>
+<center><P>
+Hey everyone..<P>
+<P>
+Welcome to this diary. I'm Rebecca, a 15 y.o., transgendered, mtf. If you're an ignorant fuck (which I'm sure the majority of you aren't), then just get lost. Otherwise, please read on and leave a note!<P>
+</b><P>
+</center><P>
+<br><P>
+<br><P>
+<center><P>
+<table background="http://www.envy.nu/galoregurl/button6.gif" height=40 width=59<tr><td></table><font face="Verdana" font size=1 font color=lime>This is my security button.<br>Making sure nice visitors come.<br><a href="http://expage.com/hbadoptbutton">Get One!</a></font><P>
+<br><P>
+<center><b><u>Contact Me!</u><P>
+<P>
+AIM: TheCanvasTree<P>
+MSN and email: communist_panda@hotmail.com<P>
+ICQ: #75696359<P>
+</b></center><P>
+<P>
+<style><!--BODY{scrollbar-face-color: white; scrollbar-shadow-color: darkblue; scrollbar-highlight-color: white; scrollbar-3dlight-color: darkblue; scrollbar-darkshadow-color: white; scrollbar-track-color: darkblue; scrollbar-arrow-color: white; }--></style> <P>
+<P>
+<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><P>
+<a href="http://sm9.sitemeter.com/stats.asp?site=sm9mangodave" target="_top"><P>
+<img src="http://sm9.sitemeter.com/meter.asp?site=sm9mangodave" alt="Site Meter" border=0></a><P>
+<!--WEBBOT bot="HTMLMarkup" Endspan --><P>
+<P>
+<u><b>Diary Design by <i>high resolution</i> and me! <P>
+<P>
+<font face="arial><P>
+</html>
+</TD>
+<TD WIDTH=249 VALIGN=top>
+<TABLE BORDER=1 CELLSPACING=0 BGCOLOR=#EE82EE                         ><TR><TD>
+<TABLE BORDER=0 CELLPADDING=2 WIDTH=249>
+
+<TR><TD ALIGN=right COLSPAN=2><FONT FACE="Arial" SIZE=2 COLOR=#483D8B><B>503 Diary Entries</FONT></TD></TR>
+
+<TR>
+<TD ALIGN="left">
+<FONT FACE="Arial" SIZE=2 COLOR=#483D8B>
+<B>Entry</B>
+</TD>
+<TD ALIGN="center">
+<FONT FACE="Arial" SIZE=2 COLOR=#483D8B>
+<B>Date</B>
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10528"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Revenge of the Serial Bores                       </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/24/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10527"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Waiting for the horde..                           </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/24/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10526"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">A somewhat better day...                          </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/24/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10525"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Last night's entry...another OD fuckup            </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/24/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10524"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">12/23/01                                          </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/23/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10523"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Miscellaneous Stuff                               </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/22/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10522"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">:)                                                </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/22/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10521"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Survey time!                                      </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/21/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10520"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">A nice day..                                      </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/21/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10519"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">12/20/01                                          </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/20/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10518"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">12/19/01                                          </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/19/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10517"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Silly parents..                                   </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/18/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10516"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">12/17/01                                          </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/17/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10515"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Boys Don't Cry                                    </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/17/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10514"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Last night's entry...                             </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/17/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10513"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">One foot in front of the other..                  </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/16/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10512"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Looking back on something...                      </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/16/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10510"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">501st entry!                                      </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/16/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10509"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">WOOOOOHOOOOOOOO!!!!!!                             </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/15/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10508"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Bwahaha...                                        </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/15/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10507"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Maybe that wasn't as dead as I thought it was..   </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/14/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10505"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Return to yourself...                             </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/14/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10504"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">That ends that then...                            </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/13/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10503"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Sporadic-period-of-time-theme                     </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/13/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10502"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">A little better...                                </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/13/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10501"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Damn you Natalie...                               </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/12/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10500"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Dammit...                                         </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/12/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10499"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">Revisiting the past                               </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/11/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10498"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">A few things...                                   </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/11/2001
+</TD>
+</TR>
+
+<TR>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="MS Sans Serif" , arial SIZE=1 COLOR=darkblue>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10497"><FONT FACE="Arial" COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">12/10/01                                          </SPAN></FONT></A>
+</TD>
+<TD ALIGN=left VALIGN=top>
+<FONT FACE="Arial" COLOR=#483D8B SIZE=2>
+12/10/2001
+</TD>
+</TR>
+
+<TR><TD>&nbsp;</TD></TR>
+
+<TR><TD COLSPAN=2 ALIGN=center><FONT FACE="MS Sans Serif", arial SIZE=2 COLOR=#483D8B><B>Entries :
+
+<FONT FACE="MS Sans Serif", arial SIZE=2 COLOR=#483D8B>474 - 503 of 503
+</TD></TR>
+<TR><TD COLSPAN=2 ALIGN=center>
+<FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#483D8B>
+
+[<A HREF=entrylist.asp?authorcode=A302542&searchrow=31><FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#483D8B>Back 30 entries</FONT></A>]&nbsp;
+[<A HREF=entrylist.asp?authorcode=A302542&searchrow=474><FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#483D8B>Diary Start</FONT></A>]
+
+</TD></TR>
+
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+<BR>
+<HR>
+<TABLE WIDTH=100% CELLPADDING=1>
+<TR>
+<TD ALIGN=center VALIGN=top>
+<FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#EE82EE>Site software and design &#169 1998-2000, </FONT>
+<A HREF=http://www.opendiary.com><FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#EE82EE>The Open Diary.</FONT></A>
+<FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#EE82EE> All rights reserved.</FONT>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

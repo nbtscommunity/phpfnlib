@@ -1,0 +1,18 @@
+<?php header('Content-Type: text/html; charset=UTF-8'); ?>
+<html>
+	<head>
+		<title><?php print(htmlentities($_SERVER['PATH_INFO'])); ?></title>
+	</head>
+	<body>
+<?php
+
+	require(dirname(__FILE__).'/render.php');
+	
+	$data = join('', file($_SERVER['PATH_TRANSLATED']));
+
+	print(wiki_render($data));
+
+?>
+
+	</body>
+</html>

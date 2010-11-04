@@ -1,0 +1,105 @@
+http://www.livejournal.com/talkpost.bml?itemid=18773757
+
+<table border="0" cellspacing="0" cellpadding="10" width="100%"><tr><td>
+
+
+
+<font size="+2" face="Verdana, Arial, Helvetica" color=#000066>Post Comment</font><p>
+
+
+<p><table><tr valign="MIDDLE"><td>Jadzia (<a href="/userinfo.bml?user=moonsparkles"><img src="http://img.livejournal.com/userinfo.gif" WIDTH=17 HEIGHT=17 ALIGN=ABSMIDDLE border=0></a><b><a href="/users/moonsparkles/">moonsparkles</a></b>) wrote,<br /><font size="-1">@ <a href="http://www.livejournal.com/users/moonsparkles/calendar/2001">2001</a>-<a href="http://www.livejournal.com/view/?type=month&user=moonsparkles&y=2001&m=12">12</a>-<a href="http://www.livejournal.com/users/moonsparkles/day/2001/12/30">30</a> 01:18:00</font></td></tr></table><center><font size="1"><br /></font>
+<table cellspacing="0" cellpadding="0" border="0" bgcolor="#a7c7e8">
+ <tr align="left">
+  <td width="7" align="left" valign="top">
+   <img width="7" height="7" src="http://img.livejournal.com/dys/corn_nw.gif" alt="/"></td>
+  <td height="7">
+   <img height="7" src="http://img.livejournal.com/dot.gif" alt=""></td>
+  <td width="7" valign="top" align="right">
+   <img height="7" src="http://img.livejournal.com/dys/corn_ne.gif" alt="\"></td>
+ </tr><tr align="left">
+  <td width="7">
+   <img width="7" height="1" src="http://img.livejournal.com/dot.gif" alt=""></td>
+  <td valign="top">
+<a href="/go.bml?itemid=18773757&dir=prev"><img hspace="2" alt="Previous Entry" height="20" border="0" title="Previous Entry" src="http://img.livejournal.com/btn_prev.gif" width="22" align="ABSMIDDLE" vspace="2"></a>&nbsp;&nbsp;<a href="/tools/memadd.bml?itemid=18773757"><img hspace="2" alt="Add to memories!" height="20" border="0" title="Add to memories!" src="http://img.livejournal.com/memadd.gif" width="22" align="ABSMIDDLE" vspace="2"></a>&nbsp;&nbsp;<a href="/tools/tellafriend.bml?itemid=18773757"><img hspace="2" alt="Tell a Friend!" height="20" border="0" title="Tell a Friend!" src="http://img.livejournal.com/btn_tellfriend.gif" width="22" align="ABSMIDDLE" vspace="2"></a>&nbsp;&nbsp;<a href="/go.bml?itemid=18773757&dir=next"><img hspace="2" alt="Next Entry" height="20" border="0" title="Next Entry" src="http://img.livejournal.com/btn_next.gif" width="22" align="ABSMIDDLE" vspace="2"></a>
+
+  </td>
+  <td width="7">
+   <img width="7" height="1" src="http://img.livejournal.com/dot.gif" alt=""></td>
+ </tr><tr>
+  <td width="7" align=left valign=top>
+   <img width="7" height="7" src="http://img.livejournal.com/dys/corn_sw.gif" alt="\"></td>
+  <td height="7">
+   <img height="7" src="http://img.livejournal.com/dot.gif" alt=""></td>
+  <td width="7" valign=top align=right>
+   <img height="7" src="http://img.livejournal.com/dys/corn_se.gif" alt="/"></td>
+ </tr>
+</table>
+
+</CENTER>
+<ul>Wow. I had a great time tonight. So I thought the peer helpers party was last night, and i was bummed because nobody called me, and i had to work, right? Well it's 6pm, and I'm sitting at my computer in my comfy pajama's, and Eric calls me, telling me that the party is tonight and started about 10 min ago. Only thing was, mom had left to go to the store, and I knew she'd be pissed if I left before she got back, especially since I never said anything about the party being tonight (due to not knowing about it...). I tell Eric that I have to wait for my mom, and he's all "well i got to go"... so i'm sitting here bummed, because I'm missing this party, right? Well mom gets home 5 min later, and erics already left. So i looked brandons number up, called and got directions.... and went! It rocked. There was only about 10 people, and we all left to rent movies, Scary Movie 2, and Blade..... and basically hung out watching movies, eating food, and talking. Brandons parents even watched scary movie 2 with us, hehehee. I didn't get home until 11:30pm, and mom was in a really good mood, and was like "glad you called when you got home, happy to hear you had a good time". Damn but i wish she acted like that all the time.</ul><br clear="ALL"><hr align="CENTER" size="2"><center><b><a href="talkread.bml?itemid=18773757">(Read comments)</a></b></center><P><span class="heading">Post a comment in response:</span><form method="POST" action="talkpost_do.bml"><input value="0" type="HIDDEN" name="parenttalkid">
+<input value="18773757" type="HIDDEN" name="itemid">
+<input value="0" type="HIDDEN" name="debug">
+<table>
+<tr valign="middle"><td align="right">From:</td><td align="middle"><input id="talkpostfromanon" value="anonymous" type="radio" name="usertype"></td><td align="left"><b><label for="talkpostfromanon">Anonymous</label></b></td></tr>
+<tr valign="middle"><td>&nbsp;</td><td align="middle"><input id="talkpostfromlj" value="user" type="radio" checked="1" name="usertype"></td><td align="left"><b><label for="talkpostfromlj">LiveJournal user:</label></b></tr>
+<tr align="left" valign="middle"><td></td><td></td><td>Username:&nbsp;<input maxlength="18" class="textbox" id="username" size="13" name="userpost"> Password:&nbsp;<input maxlength="30" class="textbox" size="13" type="password" name="password"> <label for="logincheck">Login?&nbsp;</label><input id="logincheck" type="checkbox" name="do_login"></td></tr>
+<tr valign="TOP"><td align="RIGHT">Subject:</td><td colspan="4"><input maxlength="100" class="textbox" value="" size="50" type="TEXT" name="subject"><br><span style="color:#909090;">No HTML allowed in subject</span></td></tr>
+<tr valign="MIDDLE"><td>&nbsp;</td><td align="LEFT" colspan="4">
+<table cellpadding="0" border="0" cellspacing="3">
+<tr><td align="MIDDLE" valign="MIDDLE" rowspan="5"><input value="none" type="RADIO" checked="CHECKED" name="subjecticon"><br><i>No Image</i></td><td rowspan="5">&nbsp;</td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm01" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm02" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm03" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm04" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm05" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm06" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm07" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm08" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm09" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="sm10" type="RADIO" name="subjecticon"></td>
+</tr>
+<tr>
+<td align="MIDDLE" valign="MIDDLE"><img height="15" border="0" src="http://img.livejournal.com/talk/sm01_smiley.gif" valign="MIDDLE" width="15"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="15" border="0" src="http://img.livejournal.com/talk/sm02_wink.gif" valign="MIDDLE" width="15"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="15" border="0" src="http://img.livejournal.com/talk/sm03_blush.gif" valign="MIDDLE" width="15"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="15" border="0" src="http://img.livejournal.com/talk/sm04_shock.gif" valign="MIDDLE" width="15"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="15" border="0" src="http://img.livejournal.com/talk/sm05_sad.gif" valign="MIDDLE" width="15"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="15" border="0" src="http://img.livejournal.com/talk/sm06_angry.gif" valign="MIDDLE" width="15"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="15" border="0" src="http://img.livejournal.com/talk/sm07_check.gif" valign="MIDDLE" width="15"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="18" border="0" src="http://img.livejournal.com/talk/sm08_star.gif" valign="MIDDLE" width="20"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="10" border="0" src="http://img.livejournal.com/talk/sm09_mail.gif" valign="MIDDLE" width="14"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="12" border="0" src="http://img.livejournal.com/talk/sm10_eyes.gif" valign="MIDDLE" width="24"></td>
+</tr>
+<tr><td align="MIDDLE" valign="MIDDLE" colspan="10"><hr size="1"></td></tr>
+<tr><td align="MIDDLE" valign="MIDDLE"><input value="md01" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="md02" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="md05" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="md06" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="md07" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="md08" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="md09" type="RADIO" name="subjecticon"></td>
+<td align="MIDDLE" valign="MIDDLE"><input value="md10" type="RADIO" name="subjecticon"></td>
+</tr>
+<tr>
+<td align="MIDDLE" valign="MIDDLE"><img height="32" border="0" src="http://img.livejournal.com/talk/md01_alien.gif" valign="MIDDLE" width="32"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="32" border="0" src="http://img.livejournal.com/talk/md02_skull.gif" valign="MIDDLE" width="32"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="25" border="0" src="http://img.livejournal.com/talk/md05_sick.gif" valign="MIDDLE" width="25"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="20" border="0" src="http://img.livejournal.com/talk/md06_radioactive.gif" valign="MIDDLE" width="20"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="20" border="0" src="http://img.livejournal.com/talk/md07_cool.gif" valign="MIDDLE" width="20"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="23" border="0" src="http://img.livejournal.com/talk/md08_bulb.gif" valign="MIDDLE" width="17"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="19" border="0" src="http://img.livejournal.com/talk/md09_thumbdown.gif" valign="MIDDLE" width="25"></td>
+<td align="MIDDLE" valign="MIDDLE"><img height="19" border="0" src="http://img.livejournal.com/talk/md10_thumbup.gif" valign="MIDDLE" width="25"></td>
+</tr>
+</table>
+</td></tr>
+<tr><td align="RIGHT">&nbsp;</td><td colspan="4">Don't auto-format: <input value="1" type="checkbox" name="prop_opt_preformatted"> <a href="http://www.livejournal.com/support/faqbrowse.bml?faqid=26"><img src="http://img.livejournal.com/help.gif" alt="(Help)" title="Help" WIDTH=14 HEIGHT=14 HSPACE=2 ALIGN=ABSMIDDLE border=0></a></td></tr>
+<tr valign="top"><td align="right">Message:</td><td colspan="4"><textarea style="width: 99%" wrap="soft" cols="50" class="textbox" rows="10" name="body"></textarea><br><input value="Post Comment" type="SUBMIT" name="submitpost">
+<input value="Preview" type="SUBMIT" name="submitpreview">
+<br><b>Notice!</b> This user has turned on the option that logs your IP address when posting. <a href="http://www.livejournal.com/support/faqbrowse.bml?faqid=66"><img src="http://img.livejournal.com/help.gif" alt="(Help)" title="Help" WIDTH=14 HEIGHT=14 HSPACE=2 ALIGN=ABSMIDDLE border=0></a><br /><span style="color:#909090;">Paragraphs will be automatically formatted by default.<br />  <b>Allowed HTML</b>: &lt;a&gt; &lt;b&gt; &lt;big&gt; &lt;blockquote&gt; &lt;br&gt; &lt;center&gt; &lt;cite&gt; &lt;code&gt; &lt;dd&gt; &lt;dl&gt; &lt;dt&gt; &lt;em&gt; &lt;font&gt; &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;hr&gt; &lt;i&gt; &lt;img&gt; &lt;li&gt; &lt;marquee&gt; &lt;ol&gt; &lt;p&gt; &lt;pre&gt; &lt;s&gt; &lt;small&gt; &lt;strike&gt; &lt;strong&gt; &lt;sub&gt; &lt;sup&gt; &lt;table&gt; &lt;td&gt; &lt;th&gt; &lt;tr&gt; &lt;tt&gt; &lt;u&gt; &lt;ul&gt; &lt;xmp&gt;</span></td></tr></table>
+</form>
+
+
+
+
+</td></tr></table>
+

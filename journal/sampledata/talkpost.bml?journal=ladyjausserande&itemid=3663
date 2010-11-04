@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+
+<head>
+<link rel="SHORTCUT ICON" href="http://www.livejournal.com/favicon.ico">
+<title>Post Comment</title>
+<meta http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+<!--
+p, td { font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+li { font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+body { font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+.navtext {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FF9900; font-weight: bold}
+.navlinks {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF; text-decoration: underline}
+a:link {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #000066; }
+a:visited {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #000066; }
+a:active {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #006699; }
+.wtext {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #FFFFFF}
+.login {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px}
+.wtextunbld { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #FFFFFF }
+.copy { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #000000}
+.heading {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #660066; font-weight: bold}
+.heading2 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #660066; font-style: italic }
+-->
+</style>
+
+<script language="JavaScript">
+  window.onerror = null;  // damn javascript.
+</script>
+<link href='/go.bml?journal=ladyjausserande&amp;itemid=3663&amp;dir=prev' rel='Previous'>
+
+
+<basefont face="Verdana,Arial,Helvetica">
+</head>
+
+<body bgcolor="#FFFFFF" background="http://img.livejournal.com/dys/bg.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text="#000000" link="#660066" vlink="#000066" alink="#CC6600" >
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr align="left" valign="top">
+	<td width="122"><a href="http://www.livejournal.com/"><img src="http://img.livejournal.com/dys/logo1.gif" width="122" height="51" border="0"></a></td>
+	<td>
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0" background="http://img.livejournal.com/dys/bg_top.gif">
+		<tr>
+		  <td width="163" align="left" valign="top"><a href="http://www.livejournal.com/"><img src="http://img.livejournal.com/dys/logo2.gif" width="170" height="51" border="0"></a></td>
+		  <td background="http://img.livejournal.com/dys/bg_top.gif" align="left" valign="top" width="244">&nbsp;</td>
+		  <td background="http://img.livejournal.com/dys/bg_top.gif" align="left" valign="top" width="475">&nbsp;</td>
+		</tr>
+	  </table>
+	</td>
+  </tr>
+
+<!--- logo, then search & logged in links bar stack on top of each other --->
+
+  <tr align="left" valign="top">
+	<td width="122" height="49"><img src="http://img.livejournal.com/dys/logo3.gif" width="122" height="52" border="0"></td>
+	<td height="49">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<!-- search bar -->
+		<tr valign="top">
+		  <td height="24" width="19%" align="left">&nbsp;</td>
+                  <form action="/multisearch.bml">
+		  <td height="24" align="right" valign="middle" colspan="2" nowrap>
+<font face="verdana, arial, sans-serif" color=#333333 size=-2>
+			<span class="wtextunbld"><label for='searchlj'>Search LiveJournal</label>:&nbsp;</span>
+<input id='searchlj' type='text' name='q' size='15' class='login' value=''> <select style="FONT-SIZE: 10px; FONT-FAMILY: verdana, arial, helvetica" name=type><option value=user SELECTED>Username<option value=email>Email<option value=int>Interest<option value=aolim>AOL IM<option value=icq>ICQ Number
+			</select>
+			<img src="http://img.livejournal.com/dot.gif" width="1" height="5">
+                        <input type=submit value="Search!" class="login">
+			</font>
+			</td></form>
+		</tr>
+<!--- /search livejournal bar --->
+
+
+<!-- logged in bar -->
+		<tr>
+		  <td height="27" class="wtext" width="19%" nowrap valign="middle">
+Welcome to LiveJournal!</td>
+		  <td height="27" width="34%">&nbsp;</td>
+		  <td height="27" width="47%" nowrap align="right" valign="middle"><a href="/"><span class="navlinks">Home</span></a> <span class="navtext">|</span> <a href="/news.bml"><span class="navlinks">News</span></a> <span class="navtext">|</span> <a href="/support/"><span class="navlinks">Help</span></a>
+
+<img src="http://img.livejournal.com/dys/5x5.gif" width="10" height="5"></td>
+		</tr>
+<!-- /logged in bar -->
+
+	  </table>
+	</td>
+  </tr>
+<!-- /logo, search, logged in bar -->
+
+<!-- left sidebar and body -->
+
+  <tr align="left" valign="top">
+	<td bgcolor="#336699" width="122" height="813">
+	  <table width="122" border="0" cellspacing="0" cellpadding="10">
+<tr align=left valign=top><td><p><span class=navtext>Welcome!</span><br><a href="/login.bml"><span class=navlinks>Login</span></a><br><a href="/create.bml"><span class=navlinks>Create a Journal</span></a><br><a href="/update.bml"><span class=navlinks>Update Journal</span></a><br></td></tr><tr align=left valign=top><td><p><span class=navtext>Find Users</span><br><a href="/random.bml"><span class=navlinks>Random</span></a><br><a href="/community/"><span class=navlinks>By Community</span></a><br><a href="/interests.bml"><span class=navlinks>By Interest</span></a><br></td></tr><tr align=left valign=top><td><p><span class=navtext>LiveJournal</span><br><a href="/download/"><span class=navlinks>Download</span></a><br><a href="/topics/"><span class=navlinks>Topics</span></a><br><a href="/invite/"><span class=navlinks>Invite a Friend</span></a><br><a href="/paidaccounts/"><span class=navlinks>Paid Accounts</span></a><br></td></tr><tr align=left valign=top><td><p><span class=navtext>Help & Support</span><br><a href="/support/faq.bml"><span class=navlinks>LiveJournal FAQ</span></a><br><a href="/support/"><span class=navlinks>Have a question?</span></a><br><a href="/lostinfo.bml"><span class=navlinks>Lost Password</span></a><br><a href="/developer/"><span class=navlinks>Developer Area</span></a><br></td></tr><tr align=left valign=top><td><p><span class=navtext>Legal</span><br><a href="/legal/tos.bml"><span class=navlinks>Terms of Service</span></a><br><a href="/legal/privacy.bml"><span class=navlinks>Privacy</span></a><br><a href="/legal/coppa.bml"><span class=navlinks>COPPA</span></a><br></td></tr>
+		</tr>
+		<tr align="left" valign="top">
+		  <td>&nbsp;</td>
+		</tr>
+		<tr align="left" valign="top">
+		  <td>&nbsp;</td>
+		</tr>
+		<tr align="left" valign="top">
+		  <td>&nbsp;</td>
+		</tr>
+	  </table>
+	  <p>&nbsp;</p>
+	  <p>&nbsp;</p>
+	</td>
+	<td height="813" bgcolor=#FFFFFF>
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<!-- login bar -->
+<form action="/login.bml" method="post">
+<input type='hidden' name='mode' value='login'>
+<tr>
+  <td align="right" valign="top" bgcolor="#FFFFFF">
+    <table border=0 cellspacing=0 cellpadding=0 width=200>
+    <tr>
+      <td align="left" valign="bottom" bgcolor="#660066"><img src="http://img.livejournal.com/dys/lg_crnrgif.gif" width="14" height="23"></td>
+      <td align="right" valign="middle" bgcolor="#660066" class="wtextunbld" nowrap>&nbsp;Username:&nbsp;</td>
+      <td align="center" valign="top" bgcolor="#660066" class="wtext" nowrap><input type="text" name="user" size="15" maxlength="15" class="login"></td>
+      <td align="right" valign="middle" bgcolor="#660066" class="wtextunbld" nowrap>&nbsp;Password:&nbsp;</td>
+      <td align="center" valign="top" bgcolor="#660066" class="wtext" nowrap><input type="password" name="password" size="10" class="login"></td>
+     <td align="center" valign="middle" bgcolor="#660066" nowrap>&nbsp;<input type=image src="http://img.livejournal.com/dys/login_but.gif" width="48" height="15" border="0"></td>
+    </tr>
+    </table>
+
+  </td>
+</tr>
+</form>
+			
+<!-- /login bar -->
+
+		<tr align="left" valign="top" bgcolor="#ffffff">
+		  <td height="585" colspan="7">
+
+<!-- body area -->
+<table border="0" cellspacing="0" cellpadding="10" width="100%"><tr><td>
+
+
+
+<font size="+2" face="Verdana, Arial, Helvetica" color=#000066>Post Comment</font><p>
+
+
+<p><table><tr valign="middle"><td>Lady Jausserande (Kim W) (<a href="/userinfo.bml?user=ladyjausserande"><img src="http://img.livejournal.com/userinfo.gif" WIDTH=17 HEIGHT=17 ALIGN=ABSMIDDLE border=0></a><b><a href="/users/ladyjausserande/">ladyjausserande</a></b>) wrote,<br /><font size="-1">@ <a href="http://www.livejournal.com/users/ladyjausserande/calendar/2002">2002</a>-<a href="http://www.livejournal.com/view/?type=month&amp;user=ladyjausserande&amp;y=2002&amp;m=2">02</a>-<a href="http://www.livejournal.com/users/ladyjausserande/day/2002/02/21">21</a> 01:09:00</font></td></tr></table><center><font size="1"><br /></font>
+<table cellspacing="0" cellpadding="0" border="0" bgcolor="#a7c7e8">
+ <tr align="left">
+  <td width="7" align="left" valign="top">
+   <img width="7" height="7" src="http://img.livejournal.com/dys/corn_nw.gif" alt="/"></td>
+  <td height="7">
+   <img height="7" src="http://img.livejournal.com/dot.gif" alt=""></td>
+  <td width="7" valign="top" align="right">
+   <img height="7" src="http://img.livejournal.com/dys/corn_ne.gif" alt="\"></td>
+ </tr><tr align="left">
+  <td width="7">
+   <img width="7" height="1" src="http://img.livejournal.com/dot.gif" alt=""></td>
+  <td valign="top">
+<table><tr><td valign="middle"><a href="/go.bml?journal=ladyjausserande&amp;itemid=3663&amp;dir=prev"><img alt="Previous Entry" height="20" border="0" src="http://img.livejournal.com/btn_prev.gif" align="absmiddle" width="22"></a>&nbsp;&nbsp;<a href="/tools/memadd.bml?journal=ladyjausserande&amp;itemid=3663"><img alt="Add to memories!" height="20" border="0" src="http://img.livejournal.com/memadd.gif" align="absmiddle" width="22"></a>&nbsp;&nbsp;<a href="/topics/additem.bml?journal=ladyjausserande&amp;itemid=3663"><img alt="Add to Topic Directory" height="20" border="0" src="http://img.livejournal.com/topic_add.gif" align="absmiddle" width="22"></a>&nbsp;&nbsp;<a href="/tools/tellafriend.bml?journal=ladyjausserande&amp;itemid=3663"><img alt="Tell a Friend!" height="20" border="0" src="http://img.livejournal.com/btn_tellfriend.gif" align="absmiddle" width="22"></a>&nbsp;&nbsp;<a href="/go.bml?journal=ladyjausserande&amp;itemid=3663&amp;dir=next"><img alt="Next Entry" height="20" border="0" src="http://img.livejournal.com/btn_next.gif" align="absmiddle" width="22"></a></td></tr></table>
+
+  </td>
+  <td width="7">
+   <img width="7" height="1" src="http://img.livejournal.com/dot.gif" alt=""></td>
+ </tr><tr>
+  <td width="7" align=left valign=top>
+   <img width="7" height="7" src="http://img.livejournal.com/dys/corn_sw.gif" alt="\"></td>
+  <td height="7">
+   <img height="7" src="http://img.livejournal.com/dot.gif" alt=""></td>
+  <td width="7" valign=top align=right>
+   <img height="7" src="http://img.livejournal.com/dys/corn_se.gif" alt="/"></td>
+ </tr>
+</table>
+
+</CENTER>
+<ul><table border="0">
+<tr><td align="right"><b>Current Mood:</b></td><td><img height="35" src="http://img.livejournal.com/mood/purplelemon/sassips/tired.gif" width="35" align="absmiddle" vspace="1"> tired</td></tr>
+<tr><td align="right"><b>Current Music:</b></td><td>Is Anybody Home - OLP</td></tr>
+</table><p>
+<font face="Arial,Helvetica" size="+1"><i><b>And maybe you should sleep. And maybe you just need a friend...</b></i></font><br />
+Sleep. Must. Sleep. Soon.<br><br>But I don't wanna mom. I don't wanna get up early. I don't wanna go to school! Oh wait...<br><br>*Fast forward*<br><br>I don't wanna wake up early. I don't wanna go to work!<br><br>Hehehe.<br><br>Lets see. On Sunday I worked 7 hours on 2 hours of sleep, got 7 hours sleep, maybe a little more on Monday (not nearly enough to counteract the previous day though), got 4 hours Tuesday and napped 2 hours after work, sleep about 10 hours last night/today yet woke up and remained tired throughout the day, back to work tomorrow and if I enter dreamland by 2:10am I'll get 7 tonight. Blerg. <br><br>They had me opening unusually often this week, but atleast that means getting up after 9 instead of 6:30. *Shudders at school memories* Back to blesséd afternoons on Friday. Yay. <br><br>Damn the Man. Damn his filthy money. Better yet, kill him and give me his. Muah ha ha ha!<br><br>I was feeling somewhat shitty before I got on-line and then I read Becky's comment on my last poem on Poetry Marathon and I got all happy despite the fact that I'll probably be somewhat zombie-like later today. Thanks Becky. *Mwah*<br><br>I'm listening to Our Lady Peace on my computer. Just put in Happiness Is Not A Fish That You Can Catch after Clumsy finished. Rockin. I love those two CD's. <br><br>"And maybe you should sleep. And maybe you just need a friend. As clumsy as you've been, there's no one laughing. You will be safe in here." - Clumsy<br><br>Raine Maida's song for his little brother. <br><br>I should sleeeep. I guess that means I should get off IRC eh? *grin*<br><br>"Hey. Is anybody home? Has anybody wasted tears on loneliness that everyone becomes..."</ul><br clear="all"><hr align="center" size="2" /><center><b><a href="talkread.bml?journal=ladyjausserande&amp;itemid=3663">(Read comments)</a></b></center><P><span class="heading">Post a comment in response:</span><form method="post" action="talkpost_do.bml"><input value="0" type="hidden" name="parenttalkid">
+<input value="3663" type="hidden" name="itemid">
+<input value="ladyjausserande" type="hidden" name="journal">
+<table>
+<tr valign="middle"><td align="right">From:</td><td align="middle"><input id="talkpostfromanon" value="anonymous" type="radio" name="usertype"></td><td align="left"><b><label for="talkpostfromanon">Anonymous</label></b></td></tr>
+<tr valign="middle"><td>&nbsp;</td><td align="middle"><input id="talkpostfromlj" value="user" type="radio" checked="1" name="usertype"></td><td align="left"><b><label for="talkpostfromlj">LiveJournal user:</label></b></tr>
+<tr align="left" valign="middle"><td></td><td></td><td>Username:&nbsp;<input maxlength="18" class="textbox" id="username" size="13" name="userpost"> Password:&nbsp;<input maxlength="30" class="textbox" size="13" type="password" name="password"> <label for="logincheck">Login?&nbsp;</label><input id="logincheck" type="checkbox" name="do_login"></td></tr>
+<tr valign="top"><td align="right">Subject:</td><td colspan="4"><input maxlength="100" class="textbox" value="" size="50" type="text" name="subject"><br /><span style="color:#909090;">No HTML allowed in subject</span></td></tr>
+<tr valign="middle"><td>&nbsp;</td><td align="left" colspan="4">
+<table cellpadding="0" border="0" cellspacing="3">
+<tr><td align="middle" valign="middle" rowspan="5"><input value="none" type="radio" checked="1" name="subjecticon"><br /><i>No Image</i></td><td rowspan="5">&nbsp;</td>
+<td align="middle" valign="middle"><input value="sm01" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm02" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm03" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm04" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm05" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm06" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm07" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm08" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm09" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="sm10" type="radio" name="subjecticon"></td>
+</tr>
+<tr>
+<td align="middle" valign="middle"><img height="15" border="0" src="http://img.livejournal.com/talk/sm01_smiley.gif" valign="middle" width="15"></td>
+<td align="middle" valign="middle"><img height="15" border="0" src="http://img.livejournal.com/talk/sm02_wink.gif" valign="middle" width="15"></td>
+<td align="middle" valign="middle"><img height="15" border="0" src="http://img.livejournal.com/talk/sm03_blush.gif" valign="middle" width="15"></td>
+<td align="middle" valign="middle"><img height="15" border="0" src="http://img.livejournal.com/talk/sm04_shock.gif" valign="middle" width="15"></td>
+<td align="middle" valign="middle"><img height="15" border="0" src="http://img.livejournal.com/talk/sm05_sad.gif" valign="middle" width="15"></td>
+<td align="middle" valign="middle"><img height="15" border="0" src="http://img.livejournal.com/talk/sm06_angry.gif" valign="middle" width="15"></td>
+<td align="middle" valign="middle"><img height="15" border="0" src="http://img.livejournal.com/talk/sm07_check.gif" valign="middle" width="15"></td>
+<td align="middle" valign="middle"><img height="18" border="0" src="http://img.livejournal.com/talk/sm08_star.gif" valign="middle" width="20"></td>
+<td align="middle" valign="middle"><img height="10" border="0" src="http://img.livejournal.com/talk/sm09_mail.gif" valign="middle" width="14"></td>
+<td align="middle" valign="middle"><img height="12" border="0" src="http://img.livejournal.com/talk/sm10_eyes.gif" valign="middle" width="24"></td>
+</tr>
+<tr><td align="middle" valign="middle" colspan="10"><hr size="1"></td></tr>
+<tr><td align="middle" valign="middle"><input value="md01" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="md02" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="md05" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="md06" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="md07" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="md08" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="md09" type="radio" name="subjecticon"></td>
+<td align="middle" valign="middle"><input value="md10" type="radio" name="subjecticon"></td>
+</tr>
+<tr>
+<td align="middle" valign="middle"><img height="32" border="0" src="http://img.livejournal.com/talk/md01_alien.gif" valign="middle" width="32"></td>
+<td align="middle" valign="middle"><img height="32" border="0" src="http://img.livejournal.com/talk/md02_skull.gif" valign="middle" width="32"></td>
+<td align="middle" valign="middle"><img height="25" border="0" src="http://img.livejournal.com/talk/md05_sick.gif" valign="middle" width="25"></td>
+<td align="middle" valign="middle"><img height="20" border="0" src="http://img.livejournal.com/talk/md06_radioactive.gif" valign="middle" width="20"></td>
+<td align="middle" valign="middle"><img height="20" border="0" src="http://img.livejournal.com/talk/md07_cool.gif" valign="middle" width="20"></td>
+<td align="middle" valign="middle"><img height="23" border="0" src="http://img.livejournal.com/talk/md08_bulb.gif" valign="middle" width="17"></td>
+<td align="middle" valign="middle"><img height="19" border="0" src="http://img.livejournal.com/talk/md09_thumbdown.gif" valign="middle" width="25"></td>
+<td align="middle" valign="middle"><img height="19" border="0" src="http://img.livejournal.com/talk/md10_thumbup.gif" valign="middle" width="25"></td>
+</tr>
+</table>
+</td></tr>
+<tr><td align="right">&nbsp;</td><td colspan="4">Don't auto-format: <input value="1" type="checkbox" name="prop_opt_preformatted"> <a href="http://www.livejournal.com/support/faqbrowse.bml?faqid=26"><img src="http://img.livejournal.com/help.gif" alt="(Help)" title="Help" WIDTH=14 HEIGHT=14 HSPACE=2 ALIGN=ABSMIDDLE border=0></a></td></tr>
+<tr valign="top"><td align="right">Message:</td><td colspan="4"><textarea style="width: 99%" wrap="soft" cols="50" class="textbox" rows="10" name="body"></textarea><br /><input value="Post Comment" type="submit" name="submitpost">
+<input value="Preview" type="submit" name="submitpreview">
+<br /><span style="color:#909090;">Paragraphs will be automatically formatted by default.<br />  <b>Allowed HTML</b>: &lt;a&gt; &lt;b&gt; &lt;big&gt; &lt;blockquote&gt; &lt;br&gt; &lt;center&gt; &lt;cite&gt; &lt;code&gt; &lt;dd&gt; &lt;dl&gt; &lt;dt&gt; &lt;em&gt; &lt;font&gt; &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;hr&gt; &lt;i&gt; &lt;img&gt; &lt;li&gt; &lt;marquee&gt; &lt;ol&gt; &lt;p&gt; &lt;pre&gt; &lt;s&gt; &lt;small&gt; &lt;strike&gt; &lt;strong&gt; &lt;sub&gt; &lt;sup&gt; &lt;table&gt; &lt;td&gt; &lt;th&gt; &lt;tr&gt; &lt;tt&gt; &lt;u&gt; &lt;ul&gt; &lt;xmp&gt;</span></td></tr></table>
+</form>
+
+
+
+
+</td></tr></table>
+<!-- /body area -->
+</td></tr></table>
+</td></tr></table>
+</body></html>
+
+

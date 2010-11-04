@@ -1,0 +1,4 @@
+Select where date is in the last week, 
+	order by date descending,
+	limit number of entries on friends page
+	

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: xmldiff
+Version: 0.6.2
+Summary: Tree 2 tree correction between xml documents
+Home-page: http://www.logilab.org/xmldiff
+Author: Logilab
+Author-email: devel@logilab.fr
+License: UNKNOWN
+Description: Xmldiff is a utility for extracting differences between two xml files. It return a set of primitives to apply on source tree to obtain the destination tree.
+Platform: UNKNOWN

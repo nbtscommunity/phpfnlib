@@ -1,0 +1,705 @@
+<pre><tt>REGEX_URL <span style="color: #990000">=</span> <span style="color: #FF0000">'(?i:(?:file|http|https|ftp|news|imap)://[-a-z0-9.]*(?:/[-a-z.~=/%&amp;;:?,0-9_]*[a-z=/%0-9_])?/?(?&lt;!&amp;gt;|&amp;gt|&amp;g|&amp;))'</span>
+REGEX_PROPERNAME <span style="color: #990000">=</span> <span style="color: #FF0000">"[A-Z][a-z]+(?:[ \t]+[A-Z][a-z]+)*"</span>
+REGEX_WIKIWORD <span style="color: #990000">=</span> <span style="color: #FF0000">'(?:[.]?|[\\#]?)\b[A-Z][0-9a-z\']*[A-Z][0-9a-z\'A-Z]*'</span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> RegexCallback
+	attr_accessor <span style="color: #990000">:</span>environment
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> initialize
+		@environment <span style="color: #990000">=</span> WikiRenderer<span style="color: #990000">.</span>new
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="font-weight: bold"><span style="color: #0000FF">throw</span></span> <span style="color: #FF0000">"no regex defined"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">throw</span></span> <span style="color: #FF0000">"nothing done with #{match[0]end"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> hash
+		<span style="font-weight: bold"><span style="color: #0000FF">class</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> WikiRenderer
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> text_decoration_markup_handlers
+		handlers <span style="color: #990000">=</span> RegexCallbacks<span style="color: #990000">.</span>new
+		handlers<span style="color: #990000">.</span>environment <span style="color: #990000">=</span> this
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>EmdashRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>ItalicRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>BoldRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>UnderlineRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>MonospaceRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> inline_markup_handlers
+		handlers <span style="color: #990000">=</span> RegexCallbacks<span style="color: #990000">.</span>new
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set_environment</span></span><span style="color: #990000">(</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>BracketLinkNaturalRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>BracketLinkRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>InterwikiNaturalRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>PersonalPageLinkRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>ThePageRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>WikiWordRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>EmailRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>URLRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>EmdashRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>ItalicRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>BoldRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>UnderlineRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>MonospaceRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+<span style="font-style: italic"><span style="color: #9A1900">#		temp = WikiRenderer::text_decoration_markup_handlers()</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">#			foreach(temp.handlers as $h) {</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">#					handlers.add($h)</span></span>
+<span style="font-style: italic"><span style="color: #9A1900">#			end</span></span>
+		handlers
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> block_markup_handlers
+		handlers <span style="color: #990000">=</span> RegexCallbacks<span style="color: #990000">.</span>new
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set_environment</span></span><span style="color: #990000">(</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>WikiHeadingRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>MIMEHeaderRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>IRCConversationRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>WikiPoetryRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>WikiListRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>WikiBlockQuoteRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>PreformatRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>WikiParagraphRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">link_url</span></span><span style="color: #990000">(</span>url<span style="color: #990000">,</span> text <span style="color: #990000">=</span> url<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #000000">htmllink</span></span><span style="color: #990000">(</span>url<span style="color: #990000">,</span> text<span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">htmllink</span></span><span style="color: #990000">(</span>url<span style="color: #990000">,</span> text<span style="color: #990000">,</span> attrs <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+		attro <span style="color: #990000">=</span> <span style="color: #FF0000">''</span>
+		attrs<span style="color: #990000">.</span>each_with_index <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>attr<span style="color: #990000">,</span>val<span style="color: #990000">|</span>
+			attro <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">' '</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> attr <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'="'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="font-weight: bold"><span style="color: #000000">htmlentities</span></span><span style="color: #990000">(</span>val<span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'"'</span> <span style="font-style: italic"><span style="color: #9A1900"># FIXME</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		url<span style="color: #990000">.</span>gsub<span style="color: #990000">!</span> <span style="color: #FF0000">'&amp;quot;'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'"'</span>
+		url<span style="color: #990000">.</span>gsub<span style="color: #990000">!</span> <span style="color: #FF0000">'&amp;#039;'</span><span style="color: #990000">,</span> <span style="color: #FF0000">"'"</span>
+		url<span style="color: #990000">.</span>gsub<span style="color: #990000">!</span> <span style="color: #FF0000">'&amp;amp;'</span><span style="color: #990000">,</span> <span style="color: #FF0000">'&amp;'</span>
+		url <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">htmlspecialchars</span></span><span style="color: #990000">(</span>$url<span style="color: #990000">,</span> ENT_QUOTES<span style="color: #990000">,</span> <span style="color: #FF0000">'UTF-8'</span><span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># FIXME</span></span>
+		<span style="color: #FF0000">"&lt;a href='#{url}'#{attro}&gt;#{text}&lt;/a&gt;"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">link_wikipage</span></span><span style="color: #990000">(</span>page<span style="color: #990000">,</span> text<span style="color: #990000">)</span>
+		htmllink page<span style="color: #990000">,</span> text
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">link_auto</span></span><span style="color: #990000">(</span>dest<span style="color: #990000">,</span> text<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span><span style="color: #990000">!</span>dest <span style="color: #990000">=</span><span style="color: #990000">~</span> <span style="color: #990000">/</span><span style="color: #990000">^</span><span style="color: #990000">(</span>http<span style="color: #990000">:</span><span style="color: #990000">|</span>ftp<span style="color: #990000">:</span><span style="color: #990000">|</span>news<span style="color: #990000">:</span><span style="color: #990000">|</span>mailto<span style="color: #990000">:</span><span style="color: #990000">|</span>https<span style="color: #990000">:</span><span style="color: #990000">)</span><span style="color: #990000">/</span><span style="color: #990000">)</span>
+			link_wikipage dest<span style="color: #990000">,</span> text
+		<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+			link_url dest<span style="color: #990000">,</span> text
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>data<span style="color: #990000">)</span>
+		data <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">htmlspecialchars</span></span><span style="color: #990000">(</span>$data<span style="color: #990000">,</span> ENT_NOQUOTES<span style="color: #990000">,</span> <span style="color: #FF0000">'UTF-8'</span><span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># FIXME</span></span>
+		handlers <span style="color: #990000">=</span> block_markup_handlers
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>parts <span style="color: #990000">=</span> data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">split</span></span><span style="color: #990000">(</span><span style="color: #990000">/</span><span style="color: #990000">^</span><span style="color: #990000">-</span><span style="color: #990000">-</span><span style="color: #990000">-</span><span style="color: #990000">-</span><span style="color: #990000">-</span><span style="color: #990000">*</span><span style="color: #990000">\</span>s<span style="color: #990000">*</span>$<span style="color: #990000">/</span>ms<span style="color: #990000">,</span> data<span style="color: #990000">)</span>
+			o <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+			parts<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>part<span style="color: #990000">|</span>
+				o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>part<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> o<span style="color: #990000">.</span>join <span style="color: #FF0000">'&lt;hr /&gt;'</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>data<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> WikiWordRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">"(?:[.]?|[\\#]?)\b[A-Z][0-9a-z']*[A-Z][0-9a-z'A-Z]*"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> environment<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">link_wikipage</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> URLRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">'('</span><span style="color: #990000">.</span>REGEX_URL<span style="color: #990000">.</span><span style="color: #FF0000">')'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> environment<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">link_url</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> EmailRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">'\b[-a-zA-Z0-9+&amp;_.]+@[-a-z0-9A-Z.]+\.[-A-Z0-9a-z.]+\b'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> environment<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">link_url</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'mailto:'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> ThePageRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">'([Tt]he\s+)('</span><span style="color: #990000">.</span>REGEX_PROPERNAME<span style="color: #990000">.</span><span style="color: #FF0000">')(\s+[Pp]age)'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">wiki_hyperlink</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> match<span style="color: #990000">[</span><span style="color: #993399">3</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> BracketLinkNaturalRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">'(["].*{,150end["]|#{REGEX_PROPERNAME})\s+&amp;lt;(#{REGEX_URL}|#{REGEX_WIKIWORD#})&amp;gt;'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">.</span>gsub<span style="color: #990000">!</span> <span style="color: #990000">/</span><span style="color: #990000">^</span><span style="color: #FF0000">"(.*)"</span>$<span style="color: #990000">/</span> <span style="color: #FF0000">'\1'</span>
+		handlers <span style="color: #990000">=</span> environment<span style="color: #990000">.</span>text_decoration_markup_handlers
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">wiki_hyperlink</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span><span style="color: #990000">,</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">)</span><span style="color: #990000">)</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> BracketLinkRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">'[[](.*?)(?:\|(.*?))?[]]'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span> <span style="color: #990000">=</span><span style="color: #990000">~</span> <span style="color: #990000">/</span><span style="color: #990000">^</span>ed<span style="color: #990000">:</span><span style="color: #990000">\</span>s<span style="color: #990000">/</span>i
+			match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">[</span><span style="color: #993399">3.</span><span style="color: #990000">.</span><span style="color: #990000">-</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">.</span>strip
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'['</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span> <span style="color: #990000">?</span> <span style="color: #FF0000">'|'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> $match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span> <span style="color: #990000">:</span> <span style="color: #FF0000">''</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">']'</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">wiki_hyperlink</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">else</span></span> 
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">wiki_hyperlink</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> InterwikiNaturalRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">"(#{REGEX_WIKIWORD})\s+\(?on\s+("</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> 
+			<span style="font-weight: bold"><span style="color: #000000">wikilist</span></span><span style="color: #990000">(</span><span style="color: #990000">)</span><span style="color: #990000">.</span>keys<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">join</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'|'</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">')\)?'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> wikilist
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #990000">{</span>
+			<span style="color: #FF0000">'MeatBall'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> <span style="color: #FF0000">'%s'</span><span style="color: #990000">,</span> 
+			<span style="color: #FF0000">'TheOriginalWiki'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> <span style="color: #FF0000">'http://c2.com/cgi/wiki?%s'</span><span style="color: #990000">,</span>
+			<span style="color: #FF0000">'NBTSCNomicWiki'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> <span style="color: #FF0000">'%s'</span><span style="color: #990000">,</span> 
+			<span style="color: #FF0000">'NomicWiki'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> <span style="color: #FF0000">'%s'</span><span style="color: #990000">,</span> 
+			<span style="color: #FF0000">'OldWiki'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> <span style="color: #FF0000">'%s'</span><span style="color: #990000">,</span>
+		<span style="color: #990000">}</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">wiki_hyperlink</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">sprintf</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">wikilist</span></span><span style="color: #990000">(</span><span style="color: #990000">)</span><span style="color: #990000">[</span>match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span><span style="color: #990000">]</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">)</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> PersonalPageLinkRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">"(--)((?:[A-Z][a-z]+[ \t]?)+([A-Z]{1,2end[.]?)?)"</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> 
+		  	<span style="color: #FF0000">"|((?:[A-Z][a-z]+[ \t]?)*[A-Z][a-z]+"</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span>
+				<span style="color: #FF0000">"(?:[ \t][A-Z]{1,2end[.]?)?)('s [pP]age)"</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span>
+			  <span style="color: #FF0000">"|(?&lt;!ed )\bby((?:[ \t]+[A-Z][a-z]+)+)\b(?!\w)"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+			<span style="font-style: italic"><span style="color: #9A1900">#var_dump($match)</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span> <span style="color: #990000">=</span><span style="color: #990000">=</span> <span style="color: #FF0000">'--'</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+				<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> environment<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">link_wikipage</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span><span style="color: #990000">,</span> <span style="color: #FF0000">'&amp;#x2014;'</span><span style="color: #990000">.</span>match<span style="color: #990000">[</span><span style="color: #993399">2</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">elsif</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">4</span><span style="color: #990000">]</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> match<span style="color: #990000">[</span><span style="color: #993399">5</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+				<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">wiki_hyperlink</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">4</span><span style="color: #990000">]</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">4</span><span style="color: #990000">]</span><span style="color: #990000">.</span>match<span style="color: #990000">[</span><span style="color: #993399">5</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+				<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> ItalicRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">'\B/(.(?&lt;!\s).*?)(?&lt;!\s)/\B'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+			source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">(</span>hash<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'&lt;em&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'&lt;/em&gt;'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> EmdashRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'--'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="color: #FF0000">'&amp;#x2014;'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> BoldRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		<span style="color: #FF0000">'\B-(.+?)-\B'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">(</span>hash<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'&lt;strong&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'&lt;/strong&gt;'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> UnderlineRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">'\b_(.(?&lt;!\s).*?)(?&lt;!\s)_\b'</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">(</span>hash<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'&lt;em class="underlined"&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'&lt;/em&gt;'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> MonospaceRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">'\B=(.+?)=\B'</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">(</span>hash<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'&lt;code&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'&lt;/code&gt;'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> PreformatRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">"(?:(?:(?&lt;=\n)|^)[ \t][^\n]{2,end\n)+"</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		handlers <span style="color: #990000">=</span> environment<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">inline_markup_handlers</span></span><span style="color: #990000">(</span><span style="color: #990000">)</span>
+		parts <span style="color: #990000">=</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">split</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"\n"</span><span style="color: #990000">)</span>
+		parts<span style="color: #990000">.</span>each_with_index <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>k<span style="color: #990000">,</span> part<span style="color: #990000">|</span>
+			parts<span style="color: #990000">[</span>k<span style="color: #990000">]</span> <span style="color: #990000">=</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>
+				part<span style="color: #990000">[</span><span style="color: #993399">1.</span><span style="color: #990000">.</span><span style="color: #990000">-</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">wordwrap</span></span><span style="color: #990000">(</span><span style="color: #993399">76</span><span style="color: #990000">,</span> <span style="color: #FF0000">"\n	"</span><span style="color: #990000">,</span> TRUE<span style="color: #990000">)</span><span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'&lt;pre&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> parts<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">join</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"\n"</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">"&lt;/pre&gt;\n"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> WikiPoetryRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">"(?:((?:^|\n)[^\n]+)[ ]/)+(?:^|\n)[^\n]+"</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		handlers <span style="color: #990000">=</span> environment<span style="color: #990000">.</span>inline_markup_handlers
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set_default</span></span><span style="color: #990000">(</span>TextDecorationMarkupRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+
+		parts <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">preg_split</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"#\s/\n#ms"</span><span style="color: #990000">,</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+
+		parts<span style="color: #990000">.</span>each_with_index <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>k<span style="color: #990000">,</span> part<span style="color: #990000">|</span>
+			parts<span style="color: #990000">[</span>k<span style="color: #990000">]</span> <span style="color: #990000">=</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>part<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+		o <span style="color: #990000">=</span> parts<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">join</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&lt;br /&gt;\n"</span><span style="color: #990000">)</span>
+
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>o<span style="color: #990000">.</span>strip<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">"&lt;p&gt;"</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">"&lt;/p&gt;"</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">''</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> WikiParagraphRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">"[^ \t\n].*?(?:\n\s*\n|\\Z|\n(?=[*]|&amp;gt;))"</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		handlers <span style="color: #990000">=</span> RegexCallbacks<span style="color: #990000">.</span>new
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set_environment</span></span><span style="color: #990000">(</span>environment<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>BracketLinkNaturalRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>BracketLinkRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>InterwikiNaturalRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>PersonalPageLinkRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>ThePageRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		andlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>WikiWordRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>EmailRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>URLRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set_default</span></span><span style="color: #990000">(</span>TextDecorationMarkupRegexCallback<span style="color: #990000">.</span>new<span style="color: #990000">)</span>
+		o <span style="color: #990000">=</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>o<span style="color: #990000">.</span>strip<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">"&lt;p&gt;#{o.strip}&lt;/p&gt;"</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">''</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> MultiRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		o <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+		handlers<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>handler<span style="color: #990000">|</span>
+			o<span style="color: #990000">[</span>handler<span style="color: #990000">.</span>hash<span style="color: #990000">]</span> <span style="color: #990000">=</span> handler<span style="color: #990000">.</span>regex
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> o<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">join</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'|'</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>defaulthandler<span style="color: #990000">)</span>
+			default <span style="color: #990000">=</span> defaulthandler
+		<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+			default <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">nil</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set_default</span></span><span style="color: #990000">(</span>default<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> defaulthandler
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #0000FF">nil</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> handlers
+		h <span style="color: #990000">=</span> RegexCallbacks<span style="color: #990000">.</span>new
+		h<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set_environment</span></span><span style="color: #990000">(</span>environment<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> h
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> TextDecorationMarkupRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> MultiRegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> handlers environment<span style="color: #990000">.</span>text_decoration_markup_handlers <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> HorizontalRuleRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">'^-----*\s*$'</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'&lt;hr /&gt;'</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> WikiBlockQuoteRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback 
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">"(?:(?:^|\n)&amp;gt;\s*([^\n]+)(?:\n|$))+"</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		inside <span style="color: #990000">=</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">.</span>sub <span style="color: #990000">/</span><span style="color: #990000">^</span><span style="color: #990000">&amp;</span>gt<span style="color: #990000">;</span><span style="color: #990000">[</span> <span style="color: #990000">\</span>t<span style="color: #990000">]</span><span style="color: #990000">*</span><span style="color: #990000">/</span>m<span style="color: #990000">,</span> <span style="color: #FF0000">''</span>
+		handlers <span style="color: #990000">=</span> environment<span style="color: #990000">.</span>block_markup_handlers
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'&lt;blockquote&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>inside<span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'&lt;/blockquote&gt;'</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> IRCConversationRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex
+		prefix <span style="color: #990000">=</span> <span style="color: #FF0000">"(?:^|\n)"</span>
+		prefix <span style="color: #990000">.</span><span style="color: #990000">=</span> <span style="color: #FF0000">"(?:[ 0-9:\t]{1,14end)?"</span>
+		re1 <span style="color: #990000">=</span>  <span style="color: #FF0000">"#{prefix}(?:&amp;lt;[^ \t]{1,20end&amp;gt;[^\n]*\n)"</span>
+		re2 <span style="color: #990000">=</span> <span style="color: #FF0000">"#{prefix}(?:[ \t]*[*][ \t][^\n]+\n)"</span>
+		re3 <span style="color: #990000">=</span> <span style="color: #FF0000">"#{prefix}(?:(?:&amp;gt;|&amp;lt;|-)-?(?:&amp;gt;|&amp;lt;|-)[ \t]*[^\n]+\n)"</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">"#{re1}(?:#{re1}|#{re2}|#{re3})+"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		handlers <span style="color: #990000">=</span> environment<span style="color: #990000">.</span>inline_markup_handlers
+		parts <span style="color: #990000">=</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">split</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"\n"</span><span style="color: #990000">)</span>
+		o <span style="color: #990000">=</span> <span style="color: #FF0000">''</span>
+		parts<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>part<span style="color: #990000">|</span>
+			o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>part<span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">"&lt;br /&gt;"</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'&lt;p&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'&lt;/p&gt;'</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> MIMEHeaderRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">"(?:(?:(?&lt;=\n|^)(?:[A-Za-z0-9]+):(?:[ \t]+[^\n]+\n))+(?:(?&lt;=\n|^)[ \t][^\n]+\n)*){2,}\n*"</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		handlers <span style="color: #990000">=</span> environment<span style="color: #990000">.</span>inline_markup_handlers
+		data <span style="color: #990000">=</span> match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">sub</span></span><span style="color: #990000">(</span><span style="color: #990000">/</span><span style="color: #990000">\</span>n<span style="color: #990000">\</span>s<span style="color: #990000">+</span><span style="color: #990000">/</span>s<span style="color: #990000">,</span> <span style="color: #FF0000">' '</span><span style="color: #990000">)</span>
+		parts <span style="color: #990000">=</span> data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">split</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"\n"</span><span style="color: #990000">)</span>
+		o <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+		parts<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>part<span style="color: #990000">|</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>part<span style="color: #990000">)</span>
+				heading<span style="color: #990000">,</span> rest <span style="color: #990000">=</span> part<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">split</span></span><span style="color: #990000">(</span><span style="color: #990000">/</span><span style="color: #990000">:</span><span style="color: #990000">\</span>s<span style="color: #990000">+</span><span style="color: #990000">/</span><span style="color: #990000">,</span> <span style="color: #993399">2</span><span style="color: #990000">)</span>
+				o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">"&lt;tr&gt;&lt;th&gt;#{heading}:&lt;/th&gt;&lt;td&gt;"</span> 
+				o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>rest<span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">"&lt;/td&gt;&lt;/tr&gt;"</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'&lt;table&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> o<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">join</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"\n"</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">"&lt;/table&gt;"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> WikiListRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">"(?:^|\n)\s*[*][^\n]+\n*(?:(?:\s|[*])[^\n]+)*"</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">wiki_render_list</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">)</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">wiki_render_list</span></span><span style="color: #990000">(</span>paragraph<span style="color: #990000">)</span>
+		lines <span style="color: #990000">=</span> paragraph<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">split</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"\n"</span><span style="color: #990000">)</span>
+		indents <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+		ci <span style="color: #990000">=</span> <span style="color: #990000">{</span><span style="color: #FF0000">'min'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">,</span> <span style="color: #FF0000">'max'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> <span style="color: #993399">0</span><span style="color: #990000">}</span>
+		tree <span style="color: #990000">=</span> ListTree<span style="color: #990000">.</span>new
+		tree<span style="color: #990000">.</span>environment <span style="color: #990000">=</span> environment
+		root <span style="color: #990000">=</span> tree
+
+		lines<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>line<span style="color: #990000">|</span>
+			i <span style="color: #990000">=</span> line<span style="color: #990000">.</span>length <span style="color: #990000">-</span> line<span style="color: #990000">.</span>ltrim<span style="color: #990000">.</span>length <span style="font-style: italic"><span style="color: #9A1900">#FIXME</span></span>
+			line<span style="color: #990000">.</span>strip<span style="color: #990000">!</span> 
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>line<span style="color: #990000">[</span><span style="color: #993399">0</span><span style="color: #990000">]</span> <span style="color: #990000">=</span><span style="color: #990000">=</span> <span style="color: #FF0000">'*'</span><span style="color: #990000">)</span>
+				bullet <span style="color: #990000">=</span> i <span style="color: #990000">+</span> <span style="color: #993399">1</span>
+				line <span style="color: #990000">=</span> line<span style="color: #990000">[</span><span style="color: #993399">1.</span><span style="color: #990000">.</span><span style="color: #990000">-</span><span style="color: #993399">0</span><span style="color: #990000">]</span><span style="color: #990000">.</span>strip
+				ti <span style="color: #990000">=</span> bullet
+			<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+				bullet <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+				ti <span style="color: #990000">=</span> i
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span> 
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>indents<span style="color: #990000">.</span>count <span style="color: #990000">=</span><span style="color: #990000">=</span> <span style="color: #993399">0</span> <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> ci<span style="color: #990000">[</span><span style="color: #FF0000">'max'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span><span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">)</span> 
+				ci<span style="color: #990000">[</span><span style="color: #FF0000">'max'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> ti
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>ti <span style="color: #990000">&gt;</span> ci<span style="color: #990000">[</span><span style="color: #FF0000">'max'</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+				<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>bullet<span style="color: #990000">)</span>
+					indents <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> ci
+					ci <span style="color: #990000">=</span> <span style="color: #990000">{</span><span style="color: #FF0000">'min'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> ci<span style="color: #990000">[</span><span style="color: #FF0000">'max'</span><span style="color: #990000">]</span> <span style="color: #990000">+</span> <span style="color: #993399">1</span><span style="color: #990000">,</span> <span style="color: #FF0000">'max'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> $bullet<span style="color: #990000">}</span>
+					new <span style="color: #990000">=</span> tree<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>new ListTree<span style="color: #990000">.</span>new<span style="color: #990000">)</span><span style="color: #990000">;</span> <span style="font-style: italic"><span style="color: #9A1900"># add and descend</span></span>
+					tree <span style="color: #990000">=</span> new
+				<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+					ci<span style="color: #990000">[</span><span style="color: #FF0000">'max'</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> ti
+				<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">elsif</span></span><span style="color: #990000">(</span>ti <span style="color: #990000">&lt;</span> ci<span style="color: #990000">[</span><span style="color: #FF0000">'min'</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+				<span style="font-weight: bold"><span style="color: #0000FF">while</span></span><span style="color: #990000">(</span>ti <span style="color: #990000">&lt;</span> ci<span style="color: #990000">[</span><span style="color: #FF0000">'min'</span><span style="color: #990000">]</span><span style="color: #990000">)</span>
+					ci <span style="color: #990000">=</span> indents<span style="color: #990000">.</span>pop
+					tree <span style="color: #990000">=</span> tree<span style="color: #990000">.</span>parent <span style="font-weight: bold"><span style="color: #0000FF">if</span></span> tree<span style="color: #990000">.</span>parent
+				<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+			line<span style="color: #990000">.</span>strip<span style="color: #990000">!</span>
+			continue <span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>line <span style="color: #990000">=</span><span style="color: #990000">=</span> <span style="color: #FF0000">''</span><span style="color: #990000">)</span> 
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>bullet<span style="color: #990000">)</span>
+				tree<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">addcopy</span></span><span style="color: #990000">(</span>line<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+				tree<span style="color: #990000">.</span>children<span style="color: #990000">[</span>tree<span style="color: #990000">.</span>children<span style="color: #990000">.</span>count <span style="color: #990000">-</span> <span style="color: #993399">1</span><span style="color: #990000">]</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> line
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+		o <span style="color: #990000">=</span> root<span style="color: #990000">.</span>as_string
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">"\n"</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> WikiHeadingRegexCallback <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> RegexCallback
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> regex <span style="color: #FF0000">"^[ \t]*-([^\n]+)-[ \t]*$"</span> <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">,</span> source<span style="color: #990000">)</span>
+		handlers <span style="color: #990000">=</span> environment<span style="color: #990000">.</span>inline_markup_handlers
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'&lt;h2&gt;'</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>match<span style="color: #990000">[</span><span style="color: #993399">1</span><span style="color: #990000">]</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">'&lt;/h2&gt;'</span><span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> ListTree 
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> initialize
+		@id <span style="color: #990000">=</span> hash
+		@children <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	
+	attr_accessor <span style="color: #990000">:</span>children
+	attr_accessor <span style="color: #990000">:</span>parent
+	attr_accessor <span style="color: #990000">:</span>id
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> environment
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span><span style="color: #990000">!</span>environment<span style="color: #990000">.</span>is_a<span style="color: #990000">?</span> Object<span style="color: #990000">)</span>
+			@environment <span style="color: #990000">=</span> WikiRenderer<span style="color: #990000">.</span>new
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> @environment
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> environment<span style="color: #990000">=</span><span style="color: #990000">(</span>e<span style="color: #990000">)</span>
+		@environment <span style="color: #990000">=</span> e
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>node<span style="color: #990000">)</span>
+		node<span style="color: #990000">.</span>environment <span style="color: #990000">=</span> environment
+		@children <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> node
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>node<span style="color: #990000">.</span>is_a<span style="color: #990000">?</span> ListTree<span style="color: #990000">)</span>
+			node<span style="color: #990000">.</span>parent <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">self</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> node
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">addcopy</span></span><span style="color: #990000">(</span>node<span style="color: #990000">)</span>
+		children <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> node
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>node<span style="color: #990000">.</span>is_a<span style="color: #990000">?</span> ListTree<span style="color: #990000">)</span>
+			node<span style="color: #990000">.</span>parent <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">self</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> node
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> as_string
+		o <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+		children<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>node<span style="color: #990000">|</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>node<span style="color: #990000">.</span>is_a<span style="color: #990000">?</span> ListTree<span style="color: #990000">)</span>
+				t <span style="color: #990000">=</span> o<span style="color: #990000">.</span>pop
+				r <span style="color: #990000">=</span> node<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">as_string</span></span><span style="color: #990000">(</span><span style="color: #990000">)</span>
+				o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> t <span style="color: #990000">+</span> r
+			<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+				handlers <span style="color: #990000">=</span> environment<span style="color: #990000">.</span>inline_markup_handlers
+				o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>node<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>o<span style="color: #990000">.</span>count<span style="color: #990000">)</span>
+			r <span style="color: #990000">=</span> <span style="color: #FF0000">''</span>
+			o<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>v<span style="color: #990000">|</span>
+				r <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="font-weight: bold"><span style="color: #000000">li</span></span><span style="color: #990000">(</span>v<span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">"\n"</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">ul</span></span><span style="color: #990000">(</span>r<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">''</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> RegexCallbacks
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> initialize
+		@handlers <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+		@default_handler <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">nil</span></span>
+		@debug <span style="color: #990000">=</span> FALSE
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	attr_accessor <span style="color: #990000">:</span>handlers
+	attr_accessor <span style="color: #990000">:</span>default_handler
+	attr_accessor <span style="color: #990000">:</span>debug
+	attr_reader <span style="color: #990000">:</span>environment
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">add</span></span><span style="color: #990000">(</span>handler<span style="color: #990000">)</span>
+		handler<span style="color: #990000">.</span>environment <span style="color: #990000">=</span> environment
+		@handlers<span style="color: #990000">[</span>handler<span style="color: #990000">.</span>hash<span style="color: #990000">]</span> <span style="color: #990000">=</span> handler
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> environment<span style="color: #990000">=</span><span style="color: #990000">(</span>e<span style="color: #990000">)</span>
+		@environment <span style="color: #990000">=</span> e
+		handlers<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>handler<span style="color: #990000">|</span>
+			handler<span style="color: #990000">.</span>environment <span style="color: #990000">=</span> e
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">remove</span></span><span style="color: #990000">(</span>key<span style="color: #990000">)</span>
+		@handlers<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">delete</span></span><span style="color: #990000">(</span>key<span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-style: italic"><span style="color: #9A1900"># This is where the magic happens.  We look at the megaeregex we've </span></span>
+	<span style="font-style: italic"><span style="color: #9A1900"># received and take the sub-expressions, match them to their original</span></span>
+	<span style="font-style: italic"><span style="color: #9A1900"># callback, adjust the match array to be what the individual expression </span></span>
+	<span style="font-style: italic"><span style="color: #9A1900"># might return after a match, and pass that to the callback, then</span></span>
+	<span style="font-style: italic"><span style="color: #9A1900"># collect the results and return that. Doing this in Ruby would be a third</span></span>
+	<span style="font-style: italic"><span style="color: #9A1900"># as many lines. (103 vs...)</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>data<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>@handlers<span style="color: #990000">.</span>count <span style="color: #990000">=</span><span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">throw</span></span> <span style="color: #FF0000">"No handlers or invalid handlers"</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		res <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+		subexphandlers <span style="color: #990000">=</span> <span style="color: #990000">[</span><span style="color: #990000">]</span>
+		reversemin <span style="color: #990000">=</span> <span style="color: #990000">{</span><span style="color: #990000">}</span>
+		reversemax <span style="color: #990000">=</span> <span style="color: #990000">{</span><span style="color: #990000">}</span>
+		offset <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>debug<span style="color: #990000">)</span>
+		 	puts <span style="color: #FF0000">"&lt;pre&gt;"</span> 
+			p @handlers
+			puts <span style="color: #FF0000">"&lt;/pre&gt;"</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		@handlers<span style="color: #990000">.</span>each <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>handler<span style="color: #990000">|</span>
+			t <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">preg_subexpressions</span></span><span style="color: #990000">(</span>handler<span style="color: #990000">.</span>regex<span style="color: #990000">)</span> <span style="color: #990000">+</span> <span style="color: #993399">1</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">for</span></span><span style="color: #990000">(</span>i <span style="color: #990000">=</span> <span style="color: #993399">0</span><span style="color: #990000">;</span> i <span style="color: #990000">&lt;</span> t<span style="color: #990000">;</span> i <span style="color: #990000">=</span> i <span style="color: #990000">+</span> <span style="color: #993399">1</span><span style="color: #990000">)</span>
+				subexphandlers<span style="color: #990000">[</span>offset <span style="color: #990000">=</span> offset <span style="color: #990000">+</span> <span style="color: #993399">1</span><span style="color: #990000">]</span> <span style="color: #990000">=</span> handler
+				reversemax<span style="color: #990000">[</span>handler<span style="color: #990000">]</span> <span style="color: #990000">=</span> offset <span style="color: #990000">-</span> <span style="color: #993399">1</span>
+				<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span><span style="color: #990000">!</span>reversemin<span style="color: #990000">[</span>handler<span style="color: #990000">]</span><span style="color: #990000">)</span> 
+					reversemin<span style="color: #990000">[</span>handler<span style="color: #990000">]</span> <span style="color: #990000">=</span> offset <span style="color: #990000">-</span> <span style="color: #993399">1</span>
+				<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+				res <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> handler<span style="color: #990000">.</span>regex
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+			res<span style="color: #990000">.</span>map<span style="color: #990000">!</span> <span style="color: #990000">{</span> <span style="color: #990000">|</span>a<span style="color: #990000">|</span> <span style="color: #FF0000">"(#{a})"</span> <span style="color: #990000">}</span>
+			re <span style="color: #990000">=</span> Regexp<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">new</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'#('</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> res<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">join</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'|'</span><span style="color: #990000">)</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> <span style="color: #FF0000">')#msu'</span><span style="color: #990000">)</span>
+
+			o <span style="color: #990000">=</span> <span style="color: #FF0000">''</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>matches <span style="color: #990000">=</span> re<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">match_all</span></span><span style="color: #990000">(</span>data<span style="color: #990000">,</span> $matches<span style="color: #990000">)</span><span style="color: #990000">)</span> <span style="font-style: italic"><span style="color: #9A1900"># FIXME</span></span>
+				parts <span style="color: #990000">=</span> data<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">split</span></span><span style="color: #990000">(</span>re<span style="color: #990000">)</span>
+				matches<span style="color: #990000">.</span>each_with_index <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>i<span style="color: #990000">,</span>match<span style="color: #990000">|</span>
+					<span style="color: #993399">2.</span>times <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> match<span style="color: #990000">.</span>shift <span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+					matches<span style="color: #990000">.</span>each_with_index <span style="font-weight: bold"><span style="color: #0000FF">do</span></span> <span style="color: #990000">|</span>k<span style="color: #990000">,</span>v<span style="color: #990000">|</span>
+						<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>v<span style="color: #990000">)</span>
+							<span style="font-weight: bold"><span style="color: #0000FF">break</span></span>
+						<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+							match<span style="color: #990000">.</span>shift
+							n <span style="color: #990000">+</span><span style="color: #990000">=</span> <span style="color: #993399">1</span>
+							<span style="font-weight: bold"><span style="color: #0000FF">next</span></span>
+						<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+					<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+					h <span style="color: #990000">=</span> subexphandlers<span style="color: #990000">[</span>n<span style="color: #990000">]</span>
+					s <span style="color: #990000">=</span> reversemin<span style="color: #990000">[</span>h<span style="color: #990000">]</span>
+					e <span style="color: #990000">=</span> reversemax<span style="color: #990000">[</span>h<span style="color: #990000">]</span>
+					l <span style="color: #990000">=</span> e <span style="color: #990000">-</span> s <span style="color: #990000">+</span> <span style="color: #993399">1</span>
+					<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>debug<span style="color: #990000">)</span>
+						puts <span style="color: #FF0000">'&lt;pre&gt;'</span>
+						p match
+						puts <span style="color: #FF0000">' -&amp;gt; '</span> <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> h<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #0000FF">class</span></span>
+						puts <span style="color: #FF0000">" handler #{n} starts at #{s} and ends at #{e}"</span>
+						puts <span style="color: #FF0000">"&lt;/pre&gt;"</span>
+						<span style="font-weight: bold"><span style="color: #000000">print</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&lt;br /&gt;\n"</span><span style="color: #990000">)</span>
+					<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+					<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>h<span style="color: #990000">.</span>is_a<span style="color: #990000">?</span> RegexCallback<span style="color: #990000">)</span>
+						temppart <span style="color: #990000">=</span> parts<span style="color: #990000">.</span>shift
+						<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>default_handler <span style="color: #990000">!</span><span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">nil</span></span><span style="color: #990000">)</span>
+							temppart <span style="color: #990000">=</span> default_handler<span style="color: #990000">.</span>callback <span style="color: #990000">[</span>temppart<span style="color: #990000">]</span> 
+						<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+						o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> temppart <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> h<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span>match<span style="color: #990000">)</span> 
+					<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+				<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+				<span style="font-weight: bold"><span style="color: #0000FF">while</span></span><span style="color: #990000">(</span>parts<span style="color: #990000">.</span>count<span style="color: #990000">)</span>
+					<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>default_handler <span style="color: #990000">!</span><span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">nil</span></span><span style="color: #990000">)</span>
+						o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> default_handler<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span><span style="color: #990000">[</span>parts<span style="color: #990000">.</span>shift<span style="color: #990000">]</span><span style="color: #990000">)</span> 
+					<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+						o <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> parts<span style="color: #990000">.</span>shift
+					<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+				<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+				<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> o
+			<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+				<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>default_handler <span style="color: #990000">!</span><span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">nil</span></span><span style="color: #990000">)</span>
+					<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> default_handler<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">callback</span></span><span style="color: #990000">(</span><span style="color: #990000">[</span>data<span style="color: #990000">]</span><span style="color: #990000">)</span> 
+				<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+					<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> data
+				<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">wiki_hyperlink</span></span><span style="color: #990000">(</span>dest<span style="color: #990000">,</span> text<span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>dest<span style="color: #990000">.</span>match <span style="color: #990000">/</span><span style="color: #990000">^</span><span style="color: #990000">(</span>file<span style="color: #990000">:</span><span style="color: #990000">|</span>http<span style="color: #990000">:</span><span style="color: #990000">|</span>ftp<span style="color: #990000">:</span><span style="color: #990000">|</span>news<span style="color: #990000">:</span><span style="color: #990000">|</span>mailto<span style="color: #990000">:</span><span style="color: #990000">|</span>https<span style="color: #990000">:</span><span style="color: #990000">)</span><span style="color: #990000">/</span><span style="color: #990000">)</span>
+		dest <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">pqurlencode</span></span><span style="color: #990000">(</span>dest<span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">return</span></span><span style="color: #990000">(</span><span style="color: #FF0000">"&lt;a href='#{dest}'&gt;#{text}&lt;/a&gt;"</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">preg_subexpressions</span></span><span style="color: #990000">(</span>re<span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> re<span style="color: #990000">.</span>source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">substr_count</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'('</span><span style="color: #990000">)</span> <span style="color: #990000">-</span> 
+			re<span style="color: #990000">.</span>source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">substr_count</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'\\('</span><span style="color: #990000">)</span> <span style="color: #990000">+</span>
+			re<span style="color: #990000">.</span>source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">substr_count</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'\\(?'</span><span style="color: #990000">)</span> <span style="color: #990000">-</span>
+			re<span style="color: #990000">.</span>source<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">substr_count</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'(?'</span><span style="color: #990000">)</span>
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> String<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">substr_count</span></span><span style="color: #990000">(</span>aString<span style="color: #990000">)</span>
+	acc <span style="color: #990000">=</span> <span style="color: #993399">0</span>
+	aString<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">scan</span></span><span style="color: #990000">(</span>aString<span style="color: #990000">)</span> <span style="color: #990000">{</span> acc <span style="color: #990000">+</span><span style="color: #990000">=</span> <span style="color: #993399">1</span><span style="color: #990000">}</span>
+	acc
+<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	function <span style="font-weight: bold"><span style="color: #000000">wiki_render</span></span><span style="color: #990000">(</span>$data<span style="color: #990000">)</span> <span style="color: #990000">{</span>
+		global $WIKI_PAGEDIR
+		$e <span style="color: #990000">=</span> RCSWikiRenderer<span style="color: #990000">.</span>new
+		$e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">set_pagedir</span></span><span style="color: #990000">(</span>$WIKI_PAGEDIR<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> $e<span style="color: #990000">.</span><span style="font-weight: bold"><span style="color: #000000">run</span></span><span style="color: #990000">(</span>$data<span style="color: #990000">)</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> WikiWikiRenderer <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> WikiRenderer <span style="color: #990000">{</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">link_known_wikipage</span></span><span style="color: #990000">(</span>$page<span style="color: #990000">,</span> $text<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> WikiRenderer<span style="color: #990000">:</span><span style="color: #990000">:</span><span style="font-weight: bold"><span style="color: #000000">link_wikipage</span></span><span style="color: #990000">(</span>$page<span style="color: #990000">,</span> $text<span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">link_unknown_wikipage</span></span><span style="color: #990000">(</span>$page<span style="color: #990000">,</span> $text<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">htmllink</span></span><span style="color: #990000">(</span>$page<span style="color: #990000">.</span><span style="color: #FF0000">'?new'</span><span style="color: #990000">,</span> $text<span style="color: #990000">,</span> <span style="font-weight: bold"><span style="color: #000000">array</span></span><span style="color: #990000">(</span><span style="color: #FF0000">'class'</span> <span style="color: #990000">=</span><span style="color: #990000">&gt;</span> <span style="color: #FF0000">'wikiwordunknown'</span><span style="color: #990000">)</span><span style="color: #990000">)</span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">link_wikipage</span></span><span style="color: #990000">(</span>$page<span style="color: #990000">,</span> $text <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #0000FF">nil</span></span><span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">is_null</span></span><span style="color: #990000">(</span>$text<span style="color: #990000">)</span><span style="color: #990000">)</span> $text <span style="color: #990000">=</span> $page
+			<span style="font-weight: bold"><span style="color: #0000FF">if</span></span><span style="color: #990000">(</span>pagedir <span style="font-weight: bold"><span style="color: #0000FF">and</span></span> <span style="color: #990000">!</span><span style="font-weight: bold"><span style="color: #000000">file_exists</span></span><span style="color: #990000">(</span>pagedir<span style="color: #990000">.</span><span style="color: #FF0000">"/"</span><span style="color: #990000">.</span>$page<span style="color: #990000">)</span><span style="color: #990000">)</span> <span style="color: #990000">{</span>
+				<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">link_unknown_wikipage</span></span><span style="color: #990000">(</span>$page<span style="color: #990000">,</span> $text<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">else</span></span>
+				<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="font-weight: bold"><span style="color: #000000">link_known_wikipage</span></span><span style="color: #990000">(</span>$page<span style="color: #990000">,</span> $text<span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">set_pagedir</span></span><span style="color: #990000">(</span>$d<span style="color: #990000">)</span>
+			pagedir <span style="color: #990000">=</span> $d
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+	<span style="font-weight: bold"><span style="color: #0000FF">class</span></span> RCSWikiRenderer <span style="color: #990000">&lt;</span><span style="color: #990000">&lt;</span> WikiWikiRenderer <span style="color: #990000">{</span>
+	<span style="font-weight: bold"><span style="color: #0000FF">def</span></span> <span style="font-weight: bold"><span style="color: #000000">link_known_wikipage</span></span><span style="color: #990000">(</span>$page<span style="color: #990000">,</span> $text<span style="color: #990000">)</span>
+			<span style="font-style: italic"><span style="color: #9A1900">#$$e = environment()</span></span>
+			$realversion <span style="color: #990000">=</span> <span style="font-weight: bold"><span style="color: #000000">key</span></span><span style="color: #990000">(</span><span style="font-weight: bold"><span style="color: #000000">rcs_get_revisions</span></span><span style="color: #990000">(</span>pagedir<span style="color: #990000">.</span>$page<span style="color: #990000">)</span><span style="color: #990000">)</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> <span style="color: #FF0000">'&lt;a href="'</span><span style="color: #990000">.</span>$page<span style="color: #990000">.</span><span style="color: #990000">(</span>$realversion<span style="color: #990000">?</span><span style="color: #FF0000">";$realversion"</span><span style="color: #990000">:</span><span style="color: #FF0000">''</span><span style="color: #990000">)</span><span style="color: #990000">.</span>
+				<span style="color: #FF0000">'"'</span><span style="color: #990000">.</span><span style="color: #990000">(</span>$realversion <span style="color: #990000">?</span>  <span style="color: #FF0000">' title="'</span><span style="color: #990000">.</span>$text<span style="color: #990000">.</span><span style="color: #FF0000">" v$realversion"</span><span style="color: #990000">.</span><span style="color: #FF0000">'"'</span><span style="color: #990000">:</span> <span style="color: #FF0000">''</span><span style="color: #990000">)</span><span style="color: #990000">.</span>
+				<span style="color: #FF0000">'&gt;'</span><span style="color: #990000">.</span>$text<span style="color: #990000">.</span><span style="color: #FF0000">'&lt;/a&gt;'</span>
+			<span style="font-weight: bold"><span style="color: #0000FF">return</span></span> $text
+		<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+	<span style="font-weight: bold"><span style="color: #0000FF">end</span></span>
+
+
+<span style="color: #990000">?</span><span style="color: #990000">&gt;</span>
+</tt></pre>

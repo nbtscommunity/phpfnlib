@@ -1,0 +1,5 @@
+#!/usr/bin/python2.2
+
+from logilab.xmldiff import xmldiff 
+import sys
+xmldiff.run(*sys.argv)

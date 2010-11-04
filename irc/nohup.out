@@ -1,0 +1,689 @@
+< :femme.sapphite.org NOTICE AUTH :*** Looking up your hostname...
+< :femme.sapphite.org NOTICE AUTH :*** Found your hostname, cached
+< :femme.sapphite.org NOTICE AUTH :*** Checking Ident
+< :femme.sapphite.org NOTICE AUTH :*** Got Ident response
+< :femme.sapphite.org 433 * test :Nickname is already in use.
+< PING :femme.sapphite.org
+< ERROR :Closing Link: 0.0.0.0 (Ping timeout)
+< :femme.sapphite.org NOTICE AUTH :*** Looking up your hostname...
+< :femme.sapphite.org NOTICE AUTH :*** Found your hostname, cached
+< :femme.sapphite.org NOTICE AUTH :*** Checking Ident
+< :femme.sapphite.org NOTICE AUTH :*** Got Ident response
+< :femme.sapphite.org 001 test :Welcome to the DALnet IRC Network test!aredridel@tauceti.independence.net
+< :femme.sapphite.org 002 test :Your host is femme.sapphite.org[@0.0.0.0], running version bahamut-1.4(30)
+< :femme.sapphite.org 003 test :This server was created Sat Jan 5 2002 at 12:21:43 EST
+< :femme.sapphite.org 004 test femme.sapphite.org bahamut-1.4(30) oiwscrknfydaAbghe biklLmMnoprRstvc
+< :femme.sapphite.org 005 test NOQUIT WATCH=128 SAFELIST MODES=6 MAXCHANNELS=10 MAXBANS=100 NICKLEN=30 TOPICLEN=307 KICKLEN=307 CHANTYPES=&# PREFIX=(ov)@+ NETWORK=DALnet SILENCE=10 :are available on this server
+< :femme.sapphite.org 251 test :There are 14 users and 9 invisible on 5 servers
+< :femme.sapphite.org 252 test 10 :IRC Operators online
+< :femme.sapphite.org 254 test 5 :channels formed
+< :femme.sapphite.org 255 test :I have 5 clients and 1 servers
+< :femme.sapphite.org 265 test :Current local users: 5 Max: 10
+< :femme.sapphite.org 266 test :Current global users: 23 Max: 53
+< :femme.sapphite.org NOTICE test :*** Notice -- motd was last changed at 5/1/2002 12:41
+< :femme.sapphite.org NOTICE test :*** Notice -- Please read the motd if you haven't read it
+< :femme.sapphite.org 375 test :- femme.sapphite.org Message of the Day - 
+< :femme.sapphite.org 372 test :- *** This is the short motd ***
+< :femme.sapphite.org 376 test :End of /MOTD command.
+< :test MODE test :+i
+> /JOIN #nbtsc
+< :femme.sapphite.org 421 test /JOIN :Unknown command
+> JOIN #nbtsc
+< :test!aredridel@tauceti.independence.net JOIN :#nbtsc
+< :femme.sapphite.org 332 test #nbtsc :It's 70š and sunny here. 
+< :femme.sapphite.org 333 test #nbtsc Qete 1010710626
+< :femme.sapphite.org 353 test = #nbtsc :test @erynne @Arianna @FoolsRun @Caer @Lazarus-drake @Enigma @pellik @Ratio @new 
+< :femme.sapphite.org 366 test #nbtsc :End of /NAMES list.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Ah, there.
+> PING :Arianna
+< :femme.sapphite.org PONG femme.sapphite.org :test
+> :Arianna CTCP PING
+< :femme.sapphite.org 421 test CTCP :Unknown command
+< :Arianna!aredridel@tauceti.independence.net MODE #nbtsc +o test
+> MOTD
+< :femme.sapphite.org 375 test :- femme.sapphite.org Message of the Day - 
+< :femme.sapphite.org 372 test :- 10/1/2002 22:33
+< :femme.sapphite.org 372 test :-                      _    _ _                      
+< :femme.sapphite.org 372 test :-   ___ __ _ _ __ _ __| |_ (_) |_ ___   ___ _ _ __ _ 
+< :femme.sapphite.org 372 test :-  (_-</ _` | '_ \ '_ \ ' \| |  _/ -_)_/ _ \ '_/ _` |
+< :femme.sapphite.org 372 test :-  /__/\__,_| .__/ .__/_||_|_|\__\___(_)___/_| \__, |
+< :femme.sapphite.org 372 test :-           |_|  |_|                           |___/ 
+< :femme.sapphite.org 372 test :- 
+< :femme.sapphite.org 372 test :- 	Server Admin: MommaBear <trish@listmistress.org>
+< :femme.sapphite.org 372 test :- 	Opers: none as of yet, if you are a server admin 
+< :femme.sapphite.org 372 test :- 		or oper on another server, ask me.
+< :femme.sapphite.org 372 test :- 
+< :femme.sapphite.org 372 test :- 
+< :femme.sapphite.org 376 test :End of /MOTD command.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net JOIN :#Nbtsc
+< :Arianna!aredridel@tauceti.independence.net MODE #nbtsc +o Rion
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Hey, Noam
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Hey.. does someone have a camp directory handy?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Ido.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Hi Ari :)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Who you after?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Katherina again..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :before I call, I want to check timezone
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :it's an 865 area code..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :but that's not minnesota
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Ah. TN.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :865 TN Tennessee (Knoxville, Jefferson City, Oak Ridge and east central Tennessee)<Eastern Time Zone>
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :[new.gif (1000 bytes)]
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Tennesee.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :EST.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Drat. EST.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :LAte there.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yep.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Yeah.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :She doesn't live in minnesota then?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :ACTION won't call tonight then.. foo.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Nope.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Tennesee.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Good I checked..
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :I'm in EST and I'm awake.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION grins.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yeah,but it's still late to call.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :ACTION grins
+< :Caer!who_@216.28.209.166 PRIVMSG #nbtsc :It's 10:43 here.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Especially since I don't know her family, or for that matter, what time /she/ goes to sleep
+< :Caer!who_@216.28.209.166 PRIVMSG #nbtsc :ACTION nods
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yeah.
+< PING :femme.sapphite.org
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Thanks Ari :)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :!seen qete
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :(she hasn't answered my email since sunday, so.. time to call)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Hey.. has anyone here seen Harold and maude?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(Ar.)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Not yet.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :I want to.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :It's on at cinicenta tonight.. I'm wondering whether to go.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :The cat stevens soundtrack makes it awfully attractive..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :You've heard it's good?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Mmm, yes.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Nick BW says "must see"
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Ooh, and only 90m
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :So not so late
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :As in, if you haven't, you're insane.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Augh! They forgot to put the showtimes in the schedule?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Ah. I'd better go then.,
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :eep.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Most likely the usual ones.. 7:15 and 9:00
+< :Caer!who_@216.28.209.166 PRIVMSG #nbtsc :ACTION thinks you should see it.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :but I don't know for sure..
+< :Caer!who_@216.28.209.166 PRIVMSG #nbtsc :ACTION shoos you out
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :Just one night, give me just one night.  In the name of love!
+> :femme.sapphite.org PONG
+< :femme.sapphite.org 409 test :No origin specified
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Wait, why are you shooing me?
+> :femme.sapphite.org PONG :test
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :9:10. Good.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :To see the movie!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Not yet!
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :'course, it's early yet.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Ok, I'm seeing it :)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :But I've got to eat and compile a kernel first.
+< :Caer!who_@216.28.209.166 PRIVMSG #nbtsc :ACTION smirks, I forgot the time difference so nyeh.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :Love lifts us up where we belong!  Where eagles fly, on a mountain high.  Love makes act like we are fools, throw our lives for one happy day.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :What's that from, new?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :ACTION ponders eating.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :ACTION watches his flippy-unclock flip
+< :Caer!who_@216.28.209.166 PRIVMSG #nbtsc :eh?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :It's not a flippy clock yet..
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :Rion:  I am singing the moulin rouge soundtrack
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :but it's a motor that spins back and forth, with LEDs on it..
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION grins.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Oh, cool!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :I haven't heard the soundtrack
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :(except in the movie0
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION nods.
+< :Caer!who_@216.28.209.166 PRIVMSG #nbtsc :Rion: cool.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :good songs, good medelies
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Will be one of those clocks that displays in ~midair
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Hopefully.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :It might not get to that point.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Ari: 2.4.16-0.3 pld kernel is stable?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Not sure. I'm on -7
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :er. -0.6
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :-7? Where from??
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :i586.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :er... .7-0.3
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Oh
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :I'm on .7-9
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Can send you the rpms.. but I don't have the source
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ACTION nods
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :No need.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :I'm fine.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :What are the 0.x releaases?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :test.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :But I love you, until the end of time.  Come what may!
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :But likely stable.
+< :quasiergic!~polyergic@208.57.218.72 JOIN :#NBTSC
+< :Arianna!aredridel@tauceti.independence.net MODE #nbtsc +o quasiergic
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :Come what may, I will love you until my dying day.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Hi Quasi :)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Ooh, what a greeting!
+< :quasiergic!~polyergic@208.57.218.72 PRIVMSG #NBTSC :enigma remember Knowledge is power.  Power corrupts.  /  Study hard.  Be Evil.
+< :Enigma!~puzzle@64.255.211.149 PRIVMSG #NBTSC :Okay quasiergic, Knowledge is power.  Power corrupts.  /  Study hard.  Be Evil.
+< :quasiergic!~polyergic@208.57.218.72 PRIVMSG #NBTSC :ACTION greets
+< :quasiergic!~polyergic@208.57.218.72 PRIVMSG #NBTSC :ACTION isn't all here
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :ACTION ponders what to eat.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :Hrm. I dunno.
+< :quasiergic!~polyergic@208.57.218.72 PRIVMSG #NBTSC :eck, don't eat that, it's never any good
+< PING :femme.sapphite.org
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :ACTION grins.. reminds me of the phantom tollbooth
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :make a speech and then eat your words
+< :quasiergic!~polyergic@208.57.218.72 PRIVMSG #NBTSC :hehe.. that's a good book (it goes wihout saying)
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION ate lots of chocolate today and is singing about love..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :(It sure does!)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :ACTION smirks
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION giggles.
+< :quasiergic!~polyergic@208.57.218.72 PRIVMSG #NBTSC :new's in love with chocolete?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :((see talkin.keenspace.org))
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #Nbtsc :((.com rather))
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :quasiergic: Come what may, I will love you until my dying day!
+< :quasiergic!~polyergic@208.57.218.72 PRIVMSG #NBTSC :new: really?  I had no idea!
+< :quasiergic!~polyergic@208.57.218.72 PRIVMSG #NBTSC :wait, who are you again?
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION laughs.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :I am no-one to be trifled with!
+< :Arianna!aredridel@tauceti.independence.net KILL test :femme!tauceti.independence.net!Arianna (Go.)
+< ERROR :Closing Link: tauceti.independence.net test (Local kill by Arianna (Go.))
+< :femme.sapphite.org NOTICE AUTH :*** Looking up your hostname...
+< :femme.sapphite.org NOTICE AUTH :*** Found your hostname, cached
+< :femme.sapphite.org NOTICE AUTH :*** Checking Ident
+< :femme.sapphite.org NOTICE AUTH :*** Got Ident response
+< :femme.sapphite.org 001 test :Welcome to the DALnet IRC Network test!aredridel@tauceti.independence.net
+< :femme.sapphite.org 002 test :Your host is femme.sapphite.org[@0.0.0.0], running version bahamut-1.4(30)
+< :femme.sapphite.org 003 test :This server was created Sat Jan 5 2002 at 12:21:43 EST
+< :femme.sapphite.org 004 test femme.sapphite.org bahamut-1.4(30) oiwscrknfydaAbghe biklLmMnoprRstvc
+< :femme.sapphite.org 005 test NOQUIT WATCH=128 SAFELIST MODES=6 MAXCHANNELS=10 MAXBANS=100 NICKLEN=30 TOPICLEN=307 KICKLEN=307 CHANTYPES=&# PREFIX=(ov)@+ NETWORK=DALnet SILENCE=10 :are available on this server
+< :femme.sapphite.org 251 test :There are 20 users and 9 invisible on 5 servers
+< :femme.sapphite.org 252 test 12 :IRC Operators online
+< :femme.sapphite.org 254 test 7 :channels formed
+< :femme.sapphite.org 255 test :I have 4 clients and 1 servers
+< :femme.sapphite.org 265 test :Current local users: 4 Max: 10
+< :femme.sapphite.org 266 test :Current global users: 29 Max: 53
+< :femme.sapphite.org NOTICE test :*** Notice -- motd was last changed at 5/1/2002 12:41
+< :femme.sapphite.org NOTICE test :*** Notice -- Please read the motd if you haven't read it
+< :femme.sapphite.org 375 test :- femme.sapphite.org Message of the Day - 
+< :femme.sapphite.org 372 test :- *** This is the short motd ***
+< :femme.sapphite.org 376 test :End of /MOTD command.
+< :test MODE test :+i
+< PING :femme.sapphite.org
+< ERROR :Closing Link: tauceti.independence.net (Ping timeout)
+< :femme.sapphite.org NOTICE AUTH :*** Looking up your hostname...
+< :femme.sapphite.org NOTICE AUTH :*** Found your hostname, cached
+< :femme.sapphite.org NOTICE AUTH :*** Checking Ident
+< :femme.sapphite.org NOTICE AUTH :*** Got Ident response
+< :femme.sapphite.org 001 test :Welcome to the DALnet IRC Network test!aredridel@tauceti.independence.net
+< :femme.sapphite.org 002 test :Your host is femme.sapphite.org[@0.0.0.0], running version bahamut-1.4(30)
+< :femme.sapphite.org 003 test :This server was created Sat Jan 5 2002 at 12:21:43 EST
+< :femme.sapphite.org 004 test femme.sapphite.org bahamut-1.4(30) oiwscrknfydaAbghe biklLmMnoprRstvc
+< :femme.sapphite.org 005 test NOQUIT WATCH=128 SAFELIST MODES=6 MAXCHANNELS=10 MAXBANS=100 NICKLEN=30 TOPICLEN=307 KICKLEN=307 CHANTYPES=&# PREFIX=(ov)@+ NETWORK=DALnet SILENCE=10 :are available on this server
+< :femme.sapphite.org 251 test :There are 18 users and 8 invisible on 5 servers
+< :femme.sapphite.org 252 test 10 :IRC Operators online
+< :femme.sapphite.org 254 test 6 :channels formed
+< :femme.sapphite.org 255 test :I have 3 clients and 1 servers
+< :femme.sapphite.org 265 test :Current local users: 3 Max: 10
+< :femme.sapphite.org 266 test :Current global users: 26 Max: 53
+< :femme.sapphite.org NOTICE test :*** Notice -- motd was last changed at 5/1/2002 12:41
+< :femme.sapphite.org NOTICE test :*** Notice -- Please read the motd if you haven't read it
+< :femme.sapphite.org 375 test :- femme.sapphite.org Message of the Day - 
+< :femme.sapphite.org 372 test :- *** This is the short motd ***
+< :femme.sapphite.org 376 test :End of /MOTD command.
+< :test MODE test :+i
+> :test jooin #nbtsc
+< :femme.sapphite.org 421 test jooin :Unknown command
+> :test join #nbtsc
+< :test!aredridel@tauceti.independence.net JOIN :#nbtsc
+< :femme.sapphite.org 332 test #nbtsc :"Excuse me, did you just lose a boob?" --Lean on Me (http://jadaze.keenspace.com/)
+< :femme.sapphite.org 333 test #nbtsc Arianna 1010728047
+< :femme.sapphite.org 353 test = #nbtsc :test Qete @mikeandhaggis @Vix @Lazarus-drake @Alyson @Rion @zack @Arianna @FoolsRun @Enigma @pellik @Ratio @new 
+< :femme.sapphite.org 366 test #nbtsc :End of /NAMES list.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :op test
+< :Arianna!aredridel@tauceti.independence.net MODE #nbtsc +o test
+< :Qete!Qetyria@205.162.250.126 PRIVMSG #nbtsc :goodnight people
+< :Qete!Qetyria@205.162.250.126 PRIVMSG #nbtsc :see you... someday
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Nigh!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ooh. This is good tea.
+< :Vix!Vux@12.236.242.38 PRIVMSG #nbtsc :or tomorrow
+< :mikeandhaggis!osprey@208.187.147.147 QUIT :Quit: 
+< :Qete!Qetyria@205.162.250.126 QUIT :Quit: party! Yes! 6:30am train. Ick.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I tried some of the tea shop's chocolate tea
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :hmm
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION wonders about eating cherry garcia.
+< :Vix!Vux@12.236.242.38 PRIVMSG #nbtsc :chocolate tea?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(was looking for something similar to the mocha mint I got in nelson. Now that was good stuff. Used roasted rye grains for a coffee substitute I believe)
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :i could go to walmart!
+> :test PRIVMSG zack :Hey.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :This one is chocolate and mint. Good.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :walmart is open 24 hours
+> :test PRIVMSG zack :WEB-IRC is getting usable.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Though maybe not quite as good as the mocha mint.
+< :Vix!Vux@12.236.242.38 PRIVMSG #nbtsc :walmart's eviiilll
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION needs some small containers to buy tea in.. 50g bags are too large.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I need like 10g each of a couple different teas, not one 50g bag of one tea..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :But film cannisters aren't good for long-term tea storage. Plastic is bad.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ari, what do you use for teas?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Glass jars.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :And ziploc bags.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ziplocs? Plastic isn't great for flavours.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Actually, the teashop person was saying glass isn't great either, because it does breathe.. little tins are best.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(Indeed, I could strongly smell chai on the outside of that glass jar of chai you gave me)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Mmm, I just use my teas up fast.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(that chai could penetrate a lead wall.)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(heh. It's very very good though. I'd like more next time you're up ;)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(Oh, only that was from oregon..)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(Mmm, yeah, 'cept I'm out.)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(I'll have to see if my parents can order it bulk)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I got a good chai from the tea shop here.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :It's not herbal though.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(Yours didn't have any actual tea in it, did it?)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Mmm.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(depends on which one.)
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION has this really nice oolong-ginseng tea that he got in boston chinatown
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(kava chai)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(one did, one didn't))
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Mm. Sounds good.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(the kava didn't)
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION likes kava
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Mmm!
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :have you guys had chrysanthymum tea?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :No!
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :it is beautiful
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :it comes as dried flowers
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh, but the tea I could really use some more of.. that wonderful genmaicha I had in seattle when we were travlling through, Ari
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :whole dried flowers
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Mmm!
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(yeah... wish I could find that again.)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :That had such a delicate flavour.. the genmaicha I can get here, while good quality, just doesn't have the same subtleness
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :I love he jasmine tea I have ... whole flowers, rolled into balls.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :i have quite a bit of whole-leaf green
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Mm!
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :which is very nice stuff
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION needs to find somewhere that sells odd and assorted teas in ~bulk.
+< PING :femme.sapphite.org
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Mmm, yeah.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :rion, chinatowns are good, as is the tealuxe website
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :self-serve, too.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :US websites are out.. too expensive.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Chinatown, yeah.. I should try that.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :chinatown good.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Wish we had a co-op here like the nelson one, or the corvallis one..
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :if helps if you have a chinaman with you who can read chinese ;)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yeah.... coops are great.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION ponders a wireless net link and zhongwen.com
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Specially if I had a hand-scanner & OCR.. 
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION grins
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION grins.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :OCR for chinese character, huh?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Hm! I really don't know if we have a coop at all here.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION can identify the various teas in chinatownboston without knowing chinese
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :i have tried most of them, and the last time i went i brought my girlfriend (who speaks chinee)
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :and reads it, too, which is useful ;)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ACTION smiles.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yeah.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :I can ID most of 'em now too.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ooh, I should be able to track down that genmaicha pretty easily.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :And love trying the ones I can't.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :what is genmaicha?
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :i have never had that
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION grins.. I'm not at that stage yet. Mostly because I don't have a bulk tea supplier
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I love trying new stuff.. but not in 50g bags!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :That's enough to last me 4 or 5 months.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :i also have a really lovely water heater from taiwan
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :GEnmaicha is a part-leaf geen tea with toasted rice in it.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(sice I don't have tea every day, and alternate which teas I do have)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Japanese, nutty.  Pleasant.  DEcent even when cheap.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :It's a sencha-based tea.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :it keeps water just below boiling
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION nods.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Usually I think.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Mmm.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Mm, nice. I usually just take the kettle off before boiling, or let it cool a bit.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ACTION has to boil water here, even for green tea.  Rolling boil.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :altitude?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(BOiling point is 198Â°F)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yep.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :7000'
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION nods.
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :this water heater thing is hermetically sealed
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION laughs
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :it boils water in moments, and keeps it hot
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :search google for 'perkengruven teas'
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :without leaking vapor
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :2 results.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :one of which: http://www.nbtsc.org/wiki/CoffeeHouseBratsUnite/13
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Our wiki is out there!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION tries to find the perkengruven website.. I want to know their tea suplier..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Maybe they don't have one..
+< ERROR :Closing Link: tauceti.independence.net (Ping timeout)
+< :femme.sapphite.org NOTICE AUTH :*** Looking up your hostname...
+< :femme.sapphite.org NOTICE AUTH :*** Checking Ident
+< :femme.sapphite.org NOTICE AUTH :*** Found your hostname
+< :femme.sapphite.org NOTICE AUTH :*** Got Ident response
+< :femme.sapphite.org 001 test :Welcome to the DALnet IRC Network test!aredridel@tauceti.independence.net
+< :femme.sapphite.org 002 test :Your host is femme.sapphite.org[@0.0.0.0], running version bahamut-1.4(30)
+< :femme.sapphite.org 003 test :This server was created Sat Jan 5 2002 at 12:21:43 EST
+< :femme.sapphite.org 004 test femme.sapphite.org bahamut-1.4(30) oiwscrknfydaAbghe biklLmMnoprRstvc
+< :femme.sapphite.org 005 test NOQUIT WATCH=128 SAFELIST MODES=6 MAXCHANNELS=10 MAXBANS=100 NICKLEN=30 TOPICLEN=307 KICKLEN=307 CHANTYPES=&# PREFIX=(ov)@+ NETWORK=DALnet SILENCE=10 :are available on this server
+< :femme.sapphite.org 251 test :There are 16 users and 8 invisible on 5 servers
+< :femme.sapphite.org 252 test 10 :IRC Operators online
+< :femme.sapphite.org 254 test 6 :channels formed
+< :femme.sapphite.org 255 test :I have 3 clients and 1 servers
+< :femme.sapphite.org 265 test :Current local users: 3 Max: 10
+< :femme.sapphite.org 266 test :Current global users: 24 Max: 53
+< :femme.sapphite.org NOTICE test :*** Notice -- motd was last changed at 5/1/2002 12:41
+< :femme.sapphite.org NOTICE test :*** Notice -- Please read the motd if you haven't read it
+< :femme.sapphite.org 375 test :- femme.sapphite.org Message of the Day - 
+< :femme.sapphite.org 372 test :- *** This is the short motd ***
+< :femme.sapphite.org 376 test :End of /MOTD command.
+< :test MODE test :+i
+> :test join #nbtsc
+< :test!aredridel@tauceti.independence.net JOIN :#nbtsc
+< :femme.sapphite.org 332 test #nbtsc :"Excuse me, did you just lose a boob?" --Lean on Me (http://jadaze.keenspace.com/)
+< :femme.sapphite.org 333 test #nbtsc Arianna 1010728047
+< :femme.sapphite.org 353 test = #nbtsc :test @Vix @Lazarus-drake @Alyson @Rion @zack @Arianna @FoolsRun @Enigma @pellik @Ratio @new 
+< :femme.sapphite.org 366 test #nbtsc :End of /NAMES list.
+< :Arianna!aredridel@tauceti.independence.net MODE #nbtsc +o test
+> :test PRIVMSG rion :Hey, come try out the web-irc client.
+> :test PRIVMSG rion :http://tauceti.independence.net/~aredridel/projects/irc.php
+> :test PRIVMSG rion :Log in as test/test
+> :test PRIVMSG rion :and you'll attach to the session I'm in now.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh, good idea.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :Ok!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :I tried a few minutes before, and the login only went back to the login screen
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :i think it is weird to put various character sets into the same font..
+> :test topic #nbtsc
+< :femme.sapphite.org 332 test #nbtsc :"Excuse me, did you just lose a boob?" --Lean on Me (http://jadaze.keenspace.com/)
+< :femme.sapphite.org 333 test #nbtsc Arianna 1010728047
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION shrugs.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :Like it does now..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :Only it goes to http://tauceti.independence.net/~aredridel/projects/irc.php/Frameset
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :Need cookies?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Why?
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :chinese characters more than make up for taking 16 bits, though ;)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :I type multilingual stuff all the time.
+< :Vix!Vux@12.236.242.38 PRIVMSG #nbtsc :ACTION types with the key bored on his lap and feels nice and lasy
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :So having to switch charsets or encodings is a royal pain.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :ACTION once again wishes there was an easy, more direct way of manipulating cookie sites in galeon
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :ACTION nods.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :You have to select an existing cookie, and then allow or deny from that site.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :Yeesh
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :Or, edit the config
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :what other languages do you write in?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :I very often quote ISO-8859-2 stuff, then reply with 8859-1 stuff..
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :I quote polish often, and write in spanish and latin
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :And gaelic.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :And I'm learning japanese.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Ã©
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ACTION grins as the accented-e comes out correctly on the web-irc client.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ari: see test
+< :Vix!Vux@12.236.242.38 PRIVMSG #nbtsc :ACTION blinks and notes that that's a lot of languages
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :accented e?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I didn't see one..
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Heh, you saw the utf-8 encoded version.
+< :Lazarus-drake!~Zaphod@adsl-216-102-105-79.dsl.scrm01.pacbell.net PRIVMSG #NBTSC :I see an accented a and a copyright symbol
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :A-tilde and copyright.
+> :test PRIVMSG rion :Yeah, needs cookies
+< :Lazarus-drake!~Zaphod@adsl-216-102-105-79.dsl.scrm01.pacbell.net PRIVMSG #NBTSC :yeah.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :augh
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :I can't even manip them manually
+< :Lazarus-drake!~Zaphod@adsl-216-102-105-79.dsl.scrm01.pacbell.net PRIVMSG #NBTSC :`'´
+< :Lazarus-drake!~Zaphod@adsl-216-102-105-79.dsl.scrm01.pacbell.net PRIVMSG #NBTSC :wassat come out as?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :Galeon's cookie handling is as bad as netscape 4, really
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :http://www-unix.oit.umass.edu/~thoureau/japanese.html
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :I bought a nice little $10 shareware cookie manager for windows.. was very happy with it.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :Waait..
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :backtick apostrophe.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ACTION laughs
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG test :the way you store cookie sites is to go to a site, with Ask before accepting turned on, and then in the yes/no dialog, check Save this decision. Yeeeesh.
+> :test PRIVMSG Status :Hi
+< :femme.sapphite.org 401 test Status :No such nick/channel
+> :test PRIVMSG Status :Hello?
+< :Vix!Vux@12.236.242.38 PRIVMSG #nbtsc :dudes, bed time for vicki
+< :femme.sapphite.org 401 test Status :No such nick/channel
+< :Vix!Vux@12.236.242.38 PRIVMSG #nbtsc :night!
+< :Vix!Vux@12.236.242.38 PRIVMSG #nbtsc :ACTION hugs all
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ACTION has read that.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ari, I can't get it to work
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ACTION still wants to learn japanese.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I'm logged in now..
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :What's it do, Noam?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Nothing
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :hm... hangs?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :After showing channel topic
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Drat.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I closed the tab.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Now I go to http://tauceti.independence.net/~aredridel/projects/irc.php again and it's blank
+> :test PRIVMSG rion :Bleh.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :<html><body></body></html>
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Gleh.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :add /Frameset to that.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Cookie problem I think
+< :Vix!Vux@12.236.242.38 QUIT :Quit: 
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ah
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :It won't display the login once I've got the cookies..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh!
+> :test PRIVMSG Status :This is a test
+< :femme.sapphite.org 401 test Status :No such nick/channel
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[01:38:51] <test> Hi
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[01:38:51] :femme.sapphite.org 401 test Status :No such nick/channel
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[01:38:59] <test> Hello?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[01:39:01] :femme.sapphite.org 401 test Status :No such nick/channel 
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I said those before
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :The refresh link doesn't work though
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(it's only refreshed because I re-went to that page after closing)
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Refresh only refreshes the windowlist.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :windowlist?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :otherwise, click the window you want to refresh.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh.. how do I refresh text?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Window?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :What window?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :"window".  "Tab".  Think XChat.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh, the title..
+< :Alyson!~branwen@64.217.231.36 PRIVMSG #nbtsc :I should probably head off to the other end of my house where i sleep, and try not to trip over anything in the dark, or make the floors creak, goodnight everyone!
+< :Alyson!~branwen@64.217.231.36 PRIVMSG #nbtsc :ACTION gives everyone hugs
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Night, Aly!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :GOODNIGHT!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION HUGS ALUYSON
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :_rion_ _#nbtsc_ _status_ _Log Off_ _Refresh_
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I see
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yep.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ooh. rion.
+< :Alyson!~branwen@64.217.231.36 QUIT :Quit: bye!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Same session, cool!
+< :Lazarus-drake!~Zaphod@adsl-216-102-105-79.dsl.scrm01.pacbell.net QUIT :Quit: Linux.  It does a developer good.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Interface is raw, but cleaning up.
+> :test PRIVMSG rion :Bleh?
+> :test PRIVMSG rion :Bleh!
+> :test PRIVMSG #nbtsc :Can you see me?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yep!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ah, now it works
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :auto-refresh would be good.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :or at least refresh on send
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yep. 
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :That's what's next to fix.
+< :Rion!noam@h24-77-57-204.gv.< :femme.sapphite.org NOTICE AUTH :*** Looking up your hostname...
+< :femme.sapphite.org NOTICE AUTH :*** Found your hostname, cached
+< :femme.sapphite.org NOTICE AUTH :*** Checking Ident
+< :femme.sapphite.org NOTICE AUTH :*** Got Ident response
+< :femme.sapphite.org 001 test :Welcome to the DALnet IRC Network test!aredridel@tauceti.independence.net
+< :femme.sapphite.org 002 test :Your host is femme.sapphite.org[@0.0.0.0], running version bahamut-1.4(30)
+< :femme.sapphite.org 003 test :This server was created Sat Jan 5 2002 at 12:21:43 EST
+< :femme.sapphite.org 004 test femme.sapphite.org bahamut-1.4(30) oiwscrknfydaAbghe biklLmMnoprRstvc
+< :femme.sapphite.org 005 test NOQUIT WATCH=128 SAFELIST MODES=6 MAXCHANNELS=10 MAXBANS=100 NICKLEN=30 TOPICLEN=307 KICKLEN=307 CHANTYPES=&# PREFIX=(ov)@+ NETWORK=DALnet SILENCE=10 :are available on this server
+< :femme.sapphite.org 251 test :There are 13 users and 6 invisible on 5 servers
+< :femme.sapphite.org 252 test 8 :IRC Operators online
+< :femme.sapphite.org 254 test 5 :channels formed
+< :femme.sapphite.org 255 test :I have 3 clients and 1 servers
+< :femme.sapphite.org 265 test :Current local users: 3 Max: 10
+< :femme.sapphite.org 266 test :Current global users: 19 Max: 53
+< :femme.sapphite.org NOTICE test :*** Notice -- motd was last changed at 5/1/2002 12:41
+< :femme.sapphite.org NOTICE test :*** Notice -- Please read the motd if you haven't read it
+< :femme.sapphite.org 375 test :- femme.sapphite.org Message of the Day - 
+< :femme.sapphite.org 372 test :- *** This is the short motd ***
+< :femme.sapphite.org 376 test :End of /MOTD command.
+< :test MODE test :+i
+> :test join #nbtsc
+< :test!aredridel@tauceti.independence.net JOIN :#nbtsc
+< :femme.sapphite.org 332 test #nbtsc :"Excuse me, did you just lose a boob?" --Lean on Me (http://jadaze.keenspace.com/)
+< :femme.sapphite.org 333 test #nbtsc Arianna 1010728047
+< :femme.sapphite.org 353 test = #nbtsc :test @pellik @Rion @zack @Arianna @FoolsRun @Enigma @new 
+< :femme.sapphite.org 366 test #nbtsc :End of /NAMES list.
+< :Arianna!aredridel@tauceti.independence.net MODE #nbtsc +o test
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I should sleep too.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Goodnight!
+> :test PRIVMSG #nbtsc :Damn.  Couldn't make streaming work.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Goodnight!
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :g'night new
+< :new!~new@24.48.168.92 PRIVMSG #NBTSC :'night dude
+< :new!~new@24.48.168.92 QUIT :Quit: burp
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :ACTION really likes having new here
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :«I built my house from barley rice / green pepper walls and water ice»
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I love that song..
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ACTION grins at pellik
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Yeah, me too.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :'tis good to have some new geek blood in here.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION wants to meet him in meatspace now
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :ACTION likes having someone with -influence- here
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :it makes all those pointless geek conversations we have mean something
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Hm.
+< :Mossaia!~emma@66.90.185.174 JOIN :#NBTSC
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Emma!
+< :Mossaia!~emma@66.90.185.174 PRIVMSG #NBTSC :Hi!
+< :Arianna!aredridel@tauceti.independence.net MODE #nbtsc +o Mossaia
+< :Mossaia!~emma@66.90.185.174 PRIVMSG #NBTSC :ACTION got absorbed in a CD thing for awhile there, heh.
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :when he disputes points about linux, hes arguing with a well researched perspective, and if he sees any merit in anything we say it will be represented at the FSF
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Mmm, yeh.
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :and now I know Im better off if I use something other then gnome
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :not that gnome is bad
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :but that it could be -better- and ximian just doesnt feel like letting me at the better code
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :and I cant stand the idea of the good gnome not being open source
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Influence?
+< :Mossaia!~emma@66.90.185.174 QUIT :Ping timeout
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :new works for the FSF
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Sorry, what about gnome?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :new worked for ximian for a month
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :he never signed a NDA
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :so they fired him after they realized they were sharing confidential info
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :such as the fact that they are getting ready to do the eudora/eudora-lite thing
+< PING :femme.sapphite.org
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[Mm. What's a good way to benchmark my computer? In particular, what's a good way to use a kernel compile as a benchmark? I'm going to try adding more memory (there's a caching issue) and I want to see how it compares before and after, in stability and speed]
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Hmm. How can they do that with gnome?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Isn't gnome GPL?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Jah.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :However, they're original holder on some of it.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oy!
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :But does that let them close-source it?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yes.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :So what happens to the rest of gnome?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :yeah, so long as they dont close source any code they dont hold
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Has to remove their code?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :No, just can't use the parts under another license.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[Ari? Justin?]
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :dont share this info
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :rion
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION is noam
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :dont go posting to slashdot or anything
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :I know
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc : [Just time make]
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh.. that wouldn't have even occured to me.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :But no, I won't
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(The info being that they might close-source it, you mean?)
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :this is why miguel was kicked off the FSF
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Who's Miguel?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :and he is going to be kicked off the gnome board
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :head of ximian
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[Ok. make clean, then make bzImage; make modules]
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[and time the bzimage & modules..]
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[Basically, what I'll likely do is use the extra uncached memory as a MTD, and the stick my swap on there]
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[Hopefully my motherboard won't turn off _all_ caching]
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[it only caches up to 64MB.. takes max 128]
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :[But I don't know if putting in more disables caching]
+> :test PRIVMSG #nbtsc :meta refresh
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :meta refresh?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :hey, would anyone here have a copy of a valid .zone file?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Um.. what's a .zone file?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(Oh, Ari.. did you ever get the ssl cert chain?)
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :dns
+< :Ratio!~joey@64.255.217.127 JOIN :#nbtsc
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Nope, I don't..
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :you dont admin on any servers that do dns?
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :(No, not yet... still on the todo list)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh.. maybe thunder..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I'll check
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Where would it be>?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :/var/named usually
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :(Mm. Is there a way to find out what chipset my system has off of /proc?)
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :There isn't one there..
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :though it's a dns host
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Just called .zone ?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :would be like 'nbtsc.org.zone'
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :What's supposed to be in it?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :do a locate
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :I did.
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :for 'zone'?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :for .zone
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :What's supposed to be in it?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :We may have it named differently
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :it should be listed in /etc/named.conf
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Please tell me what it is!
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :named is the linux dns server
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :What is the zone file?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :What is a zone file?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :ACTION shrugs
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :We have a named.ca. But I don't know if that's what you're looking for, because I don't know what I'm supposed to be looking for.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :ARe you looking for an example, or a specific zone?
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :an example
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :the howto example is a piece of crap
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Ah.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :So any DNS zone file.
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :yeah
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION sighs. Fine.
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :You should read the dns howto Rion
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :its good stuff to know
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Yes, but not now..
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Noam: on wondermill, they're the .hosts files
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Thank you, Ari.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :That was helpful.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :So yes, I have a about a hundred of them then.
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :I just need one
+< PING :femme.sapphite.org
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :put it in my home dir on paradoxical
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh.. I was just doing a DCC
+< :pellik!~pellik@64.105.214.42 QUIT :Quit: Client Exiting
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Is your homedir writeable?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :ACTION blinks
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Yeesh.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :That was mildly frusterating
+< :zack!~zack@64.255.211.149 PRIVMSG #nbtsc :he's being as helpful as usual.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Yeah...
+< :pellik!~pellik@64.105.214.42 JOIN :#nbtsc
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Justin: I dcc'd it to you.
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :yeah
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :And your homedir isn't writeable
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :I got it
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Ok, good
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :heh
+< :zack!~zack@64.255.211.149 QUIT :Quit: fucking computers.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Oh, goodnight!
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Night.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :s/h/k
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :whos going to bed?
+< :Rion!noam@h24-77-57-204.gv.shawcable.net PRIVMSG #nbtsc :Me! Except I typoed.
+> :test PRIVMSG #nbtsc :Noam.
+< :Ratio!~joey@64.255.217.127 PRIVMSG #nbtsc :ACTION sets his res to 1280x768... this is odd..
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :oh, goodnight Rion
+< :Ratio!~joey@64.255.217.127 PRIVMSG #nbtsc :G'night Noam.
+< :Rion!noam@h24-77-57-204.gv.shawcable.net QUIT :Quit: [x]chat
+< :Arianna!aredridel@tauceti.independence.net MODE #nbtsc +oo pellik Ratio
+> :test PRIVMSG #nbtsc :And I think I shall head off too.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :I'll get streaming on the IRC client working tomorrow.
+< :Arianna!aredridel@tauceti.independence.net PRIVMSG #nbtsc :Goodnight.
+< :pellik!~pellik@64.105.214.42 PRIVMSG #nbtsc :Goodnight Ari
+< :Arianna!aredridel@tauceti.independence.net QUIT :Quit: *in a puff of fairy dust*
+> :test 
+> :test 
+> :test quit I go now.
+< ERROR :Closing Link: tauceti.independence.net (Quit: I)

@@ -1,0 +1,497 @@
+
+<HTML>
+<HEAD>
+<TITLE>
+Sapphire's Gaze                - Double-Bubble Goodness                            
+</TITLE>
+<SCRIPT LANGUAGE="javascript">
+<!-- hide
+var txt="Are you sure you want to delete checked notes?"
+function enterOrNot(){
+        if (!confirm (txt)){return false;}
+		else return true;}		
+var txt2="Are you sure you want to delete this entry?"		
+function deleteConfirm(){
+        if (!confirm (txt2)){return false;}
+		else return true;}		
+// unhide -->
+</SCRIPT>
+</HEAD>
+<BODY BACKGROUND=backgrounds/odbg6.jpg         LINK=blue VLINK=blue MARGINHEIGHT=0 MARGINWIDTH=0 TOPMARGIN=0 LEFTMARGIN=0>
+<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR>
+<TD WIDTH=136 VALIGN=bottom>
+<!-- site logo -->
+<A HREF=default.asp><IMG SRC=images/odlogo2.gif WIDTH=136 HEIGHT=124 BORDER=0 ALT="The Open Diary"><BR></A>
+</TD>
+<TD ALIGN=center>
+<!-- begin ad space -->
+<TABLE WIDTH=590 BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR>
+<TD COLSPAN=3>
+<!-- masthead -->
+<SCRIPT LANGUAGE="JavaScript"><!--
+function MHPopup(url) {
+  var mhpopup = window.open(url,"wfpopup","scrollbars=yes,resizable=no,status=0,width=300,height=300");
+  if(!mhpopup.opener) mhpopup.opener = window;
+  mhpopup.focus();
+} // MHPopup
+// -->
+</SCRIPT>
+<MAP NAME="mhmapwf">
+<AREA SHAPE="RECT" HREF="http://www.womensforum.com/" COORDS="0,0,204,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/channels.html')" COORDS="205,0,333,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/contests.html')" COORDS="205,15,333,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/toppicks.html')" COORDS="336,0,464,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/interact.html')" COORDS="336,15,464,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/newsletters.html')" COORDS="467,0,595,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/aboutwf.html')" COORDS="467,15,595,29" TARGET="_parent">
+</MAP>
+<IMG SRC="http://www.opendiary.com/images/masthead-border-violethaze.gif" HEIGHT="30" WIDTH="600" BORDER="0" USEMAP="#mhmapwf"><BR CLEAR=ALL>
+<!-- end masthead -->
+</TD>
+</TR>
+<TR>
+<TD ALIGN=right VALIGN=top>
+<!-- begin 120 button -->
+<a href="http://www.commission-junction.com/track/track.dll?AID=193835&PID=654602&URL=http%3A%2F%2Fwww%2Ehalf%2Ecom" target="_top">
+<img src="http://www.commission-junction.com/banners/tracker.exe?PID=654602&AID=193835&banner=193835%2Egif" width="120" height="60" alt="Half.com: buy/sell used books, movies, music,games" border="0"></a>
+<!-- end 120 button -->
+</TD>
+<TD ALIGN=center VALIGN=top>
+<IMG SRC=images/advertiser.gif BORDER=0>
+</TD>
+<TD VALIGN=top>
+<!-- 468x60 adslot -->
+<!-- start DART 468x60 -->
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+	var ord = Math.floor(Math.random() * 1000000) + "?";
+	document.write('<IFRAME SRC="http://ad.doubleclick.net/adi/womensforum_opendiary.l90/;sz=468x60;ord=' + ord + '" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no">');
+	document.write('<' + 'SCRIPT language="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/womensforum_opendiary.l90/;abr=!ie;sz=468x60;ord=' + ord + '"><' + '/SCRIPT>');
+	document.write('</IFRAME>');
+//-->
+</SCRIPT>
+<NOSCRIPT>
+	<A HREF="http://ad.doubleclick.net/jump/womensforum_opendiary.l90/;sz=468x60;ord=[random_number]?">
+		<IMG SRC="http://ad.doubleclick.net/ad/womensforum_opendiary.l90/;sz=468x60;ord=[random_number]?" border=0 height="60" width="468">
+	</A>
+</NOSCRIPT>
+<!-- end DART 468x60 -->
+<!-- adslot end -->
+</TD>
+</TR>
+</TABLE>
+<nobr>
+<INPUT TYPE="hidden" NAME="SUName" VALUE="personalweb">
+<INPUT TYPE="hidden" NAME="IAM" VALUE="vpn000180_2">
+</nobr>
+</form>
+<!-- end ad space -->
+</TD>
+</TR>
+<TR>
+<TD ALIGN=left VALIGN=middle BGCOLOR=darkblue>&nbsp;</TD>
+<TD ALIGN=right BGCOLOR=darkblue><FONT FACE=arial COLOR=white SIZE=2><B>&nbsp;</B></FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN=2><IMG SRC=images/yellowline.gif WIDTH=100% HEIGHT=1 BORDER=0></TD>
+</TR>
+<TR>
+<TD COLSPAN=2 BGCOLOR=#4682B4                         >
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100%>
+<TR>
+<TD>
+</TD>
+<TD ALIGN=right>
+<TABLE CELLSPACING=2 BGCOLOR=#4682B4                         >
+<TR>
+
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=diarylist.asp?list=1&start=1&min=A&max=A><B><FONT FACE=arial COLOR=#F0F8FF SIZE=2><SPAN STYLE="TEXT-DECORATION: none">index</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=recent.asp><B><FONT FACE=arial COLOR=#F0F8FF SIZE=2><SPAN STYLE="TEXT-DECORATION: none">recent</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=random.asp><B><FONT FACE=arial COLOR=#F0F8FF SIZE=2><SPAN STYLE="TEXT-DECORATION: none">random</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=search.asp><B><FONT FACE=arial COLOR=#F0F8FF SIZE=2><SPAN STYLE="TEXT-DECORATION: none">search</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=theme.asp><B><FONT FACE=arial COLOR=#F0F8FF SIZE=2><SPAN STYLE="TEXT-DECORATION: none">theme</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=circles.asp><B><FONT FACE=arial COLOR=#F0F8FF SIZE=2><SPAN STYLE="TEXT-DECORATION: none">circles</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=http://freemail.opendiary.com><B><FONT FACE=arial COLOR=#F0F8FF SIZE=2><SPAN STYLE="TEXT-DECORATION: none">mail</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=helpindex.asp><B><FONT FACE=arial COLOR=#F0F8FF SIZE=2><SPAN STYLE="TEXT-DECORATION: none">help&nbsp;</SPAN></FONT></A></TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=136 BGCOLOR=#4682B4                          VALIGN=top>
+<TABLE CELLPADDING=4>
+
+<TR><TD>
+<FORM ACTION="express.asp" METHOD="post">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR><TD ALIGN=right><FONT FACE=arial SIZE=2 COLOR=#F0F8FF><B>unlock my diary</B></FONT></TD></TR>
+<TR><TD ALIGN=left>
+<INPUT NAME="logstring" SIZE=14 MAXLENGTH=30>
+</TD></TR>
+<TR><TD ALIGN=left>
+<INPUT NAME="logpw" TYPE=password SIZE=14 MAXLENGTH=30>
+</TD></TR>
+<TR><TD ALIGN=left>
+<INPUT TYPE=image WIDTH=47 HEIGHT=18 BORDER=0 SRC=images/unlockit.gif>
+<INPUT TYPE=hidden NAME=localpage VALUE=/entryview38.asp?authorcode=A288551&entry=10210>
+</TD></TR>
+</TABLE>
+</FORM>
+</TD></TR>
+
+<TR><TD ALIGN=right><A HREF="default.asp"><B><FONT FACE=arial SIZE=2 COLOR=#F0F8FF><SPAN STYLE="TEXT-DECORATION: none">main page</SPAN></FONT></A></TD></TR>
+
+<TR><TD ALIGN=right><A HREF="entrylist.asp?authorcode=A288551"><B><FONT FACE=arial SIZE=2 COLOR=#F0F8FF><SPAN STYLE="TEXT-DECORATION: none">diary contents</SPAN></FONT></A></TD></TR>
+<TR><TD ALIGN=right><A HREF="entrycalendar.asp?authorcode=A288551&month=12&year=2001"><B><FONT FACE=arial SIZE=2 COLOR=#F0F8FF><SPAN STYLE="TEXT-DECORATION: none">diary calendar</SPAN></FONT></A></TD></TR>
+<TR><TD ALIGN=right><A HREF="notelist.asp?authorcode=A288551"><B><FONT FACE=arial SIZE=2 COLOR=#F0F8FF><SPAN STYLE="TEXT-DECORATION: none">read all notes</SPAN></FONT></A></TD></TR>
+<TR><TD ALIGN=right><A HREF="readerchoice.asp?authorcode=A288551&entrycode=10210"><B><FONT FACE=arial SIZE=2 COLOR=#F0F8FF><SPAN STYLE="TEXT-DECORATION: none">reader's choice</SPAN></FONT></A></TD></TR>
+
+<TR><TD ALIGN=right>
+<FORM ACTION="express.asp" METHOD="post">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD ALIGN=right><FONT FACE=arial SIZE=2 COLOR=#F0F8FF><B>jump to a diary</B></FONT></TD></TR>
+<TR><TD ALIGN=right>
+<INPUT NAME="expressstring" SIZE=14 MAXLENGTH=20>
+</TD></TR>
+<TR><TD ALIGN=right>
+<INPUT TYPE="image" WIDTH=47 HEIGHT=18 BORDER=0 src="images/findit.gif">
+</TD></TR></TABLE>
+</FORM>
+</TD></TR>
+<TR><TD></TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=100% VALIGN=top>
+<!-- content -->
+<TABLE BORDER=0 CELLPADDING=6 WIDTH=100%>
+<TR>
+<TD ALIGN=left VALIGN=top>
+<B>
+<FONT FACE="Arial" SIZE=3  COLOR=#00008B>
+Vibrating Chicken of Doom                         
+<BR>
+<FONT FACE="Arial" SIZE=2 COLOR=#00008B>
+by Sapphire's Gaze               </B>
+</TD>
+<TD ALIGN="right" VALIGN="top" NOWRAP>
+<B>
+<FONT FACE="Arial" , arial SIZE=2 COLOR=#00008B>
+
+Location: A very descriptive location   
+<BR>
+<FONT FACE="Arial" , arial SIZE=2 COLOR=#00008B>
+
+Age:&nbsp;20
+&nbsp;&nbsp;
+
+Sex :&nbsp;F</B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=50%>
+
+<A HREF="entryview38.asp?authorcode=A288551&entry=10209"><B><FONT FACE=arial SIZE=1 COLOR=#00008B><SPAN STYLE="TEXT-DECORATION: none">previous entry : The Decision & Red Hair                           </SPAN></FONT></B></A>
+
+</TD>
+<TD ALIGN=right WIDTH=50%>
+
+<A HREF=entryview38.asp?authorcode=A288551&entry=10211><B><FONT FACE=arial SIZE=1 COLOR=#00008B><SPAN STYLE="TEXT-DECORATION: none">next entry: My Teenage Fantasy...                             </SPAN></FONT></A>
+
+</TD>
+</TR>
+</TABLE>
+<HR>
+<TABLE WIDTH=100%>
+
+<TR>
+<TD>
+<B>
+<FONT FACE="Arial" , arial SIZE=3  COLOR=#00008B>
+Double-Bubble Goodness                            
+</TD>
+<TD ALIGN="right">
+<B>
+<FONT FACE="Arial" , arial SIZE=3  COLOR=#00008B>
+12/14/2001
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER=0 CELLPADDING=6 WIDTH=100%>
+<TR>
+<TD WIDTH=100% VALIGN=top COLSPAN=2>
+
+<FONT FACE="Verdana", arial SIZE=2  COLOR=#00008B>
+I do declare today Musical Day. I have all of my mp3 CDs back again [thanks Marisa!], and I pulled out a few old Janet Jackson compilations. Though I adore J-Pop, I'm a Janet fan from way back. Oh come on...don't look at me like that, she's fantastic ;P<P>
+<P>
+However, I wanted today's entry to focus on my elation when opening Marisa's package [she mailed the CDs back to me because I wasn't going to be seeing her until after Christmas - I left them at her place last time I was there]. So, for your entertainment and amusement, I have taken a series of digicam photos, shrunk down and showing excatly what it's like to open a package, Rebekah-style. To view the caption, hold your mouse over each image:<P>
+<P>
+<center><img src="http://www.alphalink.com.au/~bracelet/digicam/package1.jpg" ALT="Marisa's package to me, sealed and labelled. Look - addressed to me and bundled in tape. Aren't I lucky?"> <img src="http://www.alphalink.com.au/~bracelet/digicam/package2.jpg" ALT="Opening the package - under all that brown paper is bubblewrap...glorious bubblewrap!!!!"> <P>
+<P>
+<img src="http://www.alphalink.com.au/~bracelet/digicam/package3.jpg" ALT="Look! Bubblewrap!! It's so spiffy that it got its own image. Worhip the 'wrap :)"> <img src="http://www.alphalink.com.au/~bracelet/digicam/package4.jpg" ALT="Okay okay, so there were CDs inside the package, but it's the bubblewrap that is important ;P"> <P>
+<P>
+<img src="http://www.alphalink.com.au/~bracelet/digicam/package5.jpg" ALT="There was a note inside. It read 'Hey!! Hehe, did you get all excited over a package & then realise it was only your CDs from me?? Ohhh this smells bubblegummy, here they are, YAY she goes. There is a surprise 4 u inside the case. Have fun... CYA, love Me. P.S. - I found some bubblewrap to put inside the case YAY"> <img src="http://www.alphalink.com.au/~bracelet/digicam/package6.jpg" ALT="Oooh, there really was something special inside the case...it looks folded...surely it could be..."><P>
+<P>
+<img src="http://www.alphalink.com.au/~bracelet/digicam/package7.jpg" ALT="It is!! Silver-coated bubblewrap - and all for me!!! *victory dance*"></center><P>
+<P>
+*Laughs* Okay, that was my amusement for the day - I hope that the full captions appear over my images. In other news, yesterday I mentioned that I had a children's party to host at work at 2pm today. Well, I had everything set up by 1:50pm, organised the cupboard, the present, the cake, the games. 2:15pm arrived and nobody had showed up yet. So I looked in the party book and phoned the telephone number listed for the parents of the child. Apparently they had forgotten to ring up and tell us that they'd cancelled the party *sigh*. And here I was in very good spirits and it was very much a case of 'all hyped up and nowhere to go'. So I packed away all of the party accessories an equipment and trundled back home, where I feasted on tea and cake. Mmmm, tea - white with half a teaspoon of sugar...just the way I like it ;P<P>
+<P>
+I now have a doctors appointment for next Friday, if anyone who read my previous two entries is wondering ^^<P>
+<P>
+I shall cut today's entry quite short, as I don't really have anything left with any substance to write, and I'd rather not post IRC logs that wouldn't mean anything to anyone unless they knew the people concerned. Anybody else out there who dislikes reading OD entries full of a log of some kind - where you have no idea what's going on and there's no explanation? Good, I'm not the only one.<P>
+<P>
+My haunting song of the night is <i>Touch Me</i>, by Rui Da Silva. Can anyone tell me if this is a cover of an older song, because I believe it is for some reason. Anyhow, when I think of this song, I remember staying at Marisa's place one night in about...April, I think. I was on the fold-out couch and I remember not being able to sleep for some reason [I'm usually out like a light wherever I am], so I put on the new tape I'd made with my mp3s and <i>Touch Me</i> came on. And since then, I've somehow unconsciously associated this song with feelings of being sad, alone and contemplative. Quite bizarre really.<P>
+<P>
+~ Rebekah<P>
+<br><P>
+<br><P>
+<br><P>
+<br><P>
+<b>Useless Fact:</b> If somebody is sharing a movie, TV or anime episodes on a peer-to-peer progam such as WinMX or Kazaa, they are more likely to let you download their file. However, if somebody is sharing mp3s, they are more likely to cut your connection with them off at regular intervals. Silly, selfish people.
+</TD>
+</TR>
+<TR><TD COLSPAN=2>&nbsp;</TD></TR>
+<TR>
+<TD WIDTH=50%>
+
+<A HREF="entryview38.asp?authorcode=A288551&entry=10209"><B><FONT FACE=arial SIZE=1 COLOR=#00008B><SPAN STYLE="TEXT-DECORATION: none">previous entry : The Decision & Red Hair                           </SPAN></FONT></B></A>
+
+</TD>
+<TD ALIGN=right WIDTH=50%>
+
+<A HREF=entryview38.asp?authorcode=A288551&entry=10211><B><FONT FACE=arial SIZE=1 COLOR=#00008B><SPAN STYLE="TEXT-DECORATION: none">next entry: My Teenage Fantasy...                             </SPAN></FONT></A>
+
+</TD>
+</TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%>
+<TR>
+<TD WIDTH=136 BGCOLOR=#4682B4                          ALIGN=center VALIGN=top>
+<IMG SRC=images/1x1spacer.gif BORDER=0 WIDTH=136 HEIGHT=1>
+</TD>
+
+<TD WIDTH=100%>
+<TABLE CELLSPACING=0 CELLPADDING=2 BORDER=0 width=100% BGCOLOR=#4682B4                         >
+<TR> 
+<TD>
+<FONT FACE="Arial", arial SIZE=2 COLOR=#F0F8FF>
+Notes from readers :<BR>
+
+<FONT FACE=arial SIZE=1 COLOR=#F0F8FF><B>This entry accepts SAFE NOTES. You must sign into the system by unlocking your own diary before posting notes to this diary.</FONT>
+
+</TD>
+<TD ALIGN=right>
+
+</TD>
+</TR>
+</TABLE>
+<P></P>
+
+<TABLE CELLSPACING=0 CELLPADDING=2 BORDER=0 WIDTH=100%>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+thanks for the note! nice useless but interesting fact there...:)  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A591614><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>oceanicfrost</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+I only download MP3 and .avi files anyway.  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A366364><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>emiloch</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+You are very interesting  :)  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A452118><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>Eliese3</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+RYN: My hair is naturally curly. I don't straighten it because it takes too long, plus i can do funky things when it's curly. My hair is really short so i like to have fun with it. Spiking it and making it stick up. But everyone seems to enjoy it. ;)  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A360074><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>AniGrrlJunke</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+Tres fantastique!  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A502454><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>dilettan~*~farinose</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+Hey, thanks for the note.  It's nice to know someone else out there thinks like I do.  Bubble wrap...woohoo!<P>
+~Sarah  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A465670><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>Sameold03</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+thanks for the note, your OD is interesting.  you sure know a lot more tech stuff than I do.  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A522397><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>dapinkiiee</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
++nods franticly+ Yuhu!...  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A502454><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>dilettan~*~farinose</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+boo banana  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A624415><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>Zilbor</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+hey thanks for the note of encouragemtn. that useless fact is super funny. where do you get stuff like that?<P>
+<P>
+Amy  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A500017><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>aimless07</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+*grins* Bubblewrap. I haven't had any for awhile, but I love it when I get it, coz I pop it alot. Nice pic on the front page. =) =)  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A377730><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>The Coolby</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+eheh WOOT go my package!!!! ehhehe.. you are soo easily amused.. hehehe.. no one else would think of digicamming opening a parcel!! hehehee.. <P>
+hey.. see you have a new wig pic!! WOOT.. thats a NEW one!?!?  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A294241><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>Queen Serenity</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+I'm giving you strange looks, Strange looks!<P>
+Funny pictures nonetheless :)  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A636130><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>Potato Farmer</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2><HR></TD></TR>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Verdana" , arial SIZE=2 COLOR=#00008B>
+Yeah that is pretty much right about the file swaping thing. I will admit I have become a non sharer with my stuff, only because it slows my downloads down. But I will be get ADSL on soon so I will happly share all my files than. :o)  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>[<A HREF=entrylist.asp?authorcode=A366735><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#00008B>Vampire's Soul</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2>
+
+</TD></TR>
+
+<TR><TD>&nbsp;</TD></TR>
+
+<TR>
+
+<TD WIDTH=50%>
+
+<A HREF="entryview38.asp?authorcode=A288551&entry=10209"><B><FONT FACE=arial SIZE=1 COLOR=#00008B><SPAN STYLE="TEXT-DECORATION: none">previous entry : The Decision & Red Hair                           </SPAN></FONT></B></A>
+
+</TD>
+<TD ALIGN=right WIDTH=50%>
+
+<A HREF=entryview38.asp?authorcode=A288551&entry=10211><B><FONT FACE=arial SIZE=1 COLOR=#F0F8FF><SPAN STYLE="TEXT-DECORATION: none">next entry: My Teenage Fantasy...                             </SPAN></FONT></B></A>
+
+</TD>
+</TR>
+
+</TABLE>
+
+<BR>
+<HR>
+<TABLE WIDTH=100% CELLPADDING=1>
+<TR>
+<TD ALIGN=center VALIGN=top>
+<FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#00008B>Site software and design &#169 1998-2000, </FONT>
+<A HREF=http://www.opendiary.com><FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#00008B>The Open Diary.</FONT></A>
+<FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#00008B> All rights reserved.</FONT>
+</TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+<!-- start DART 1x2  -->
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+	var ord = Math.floor(Math.random() * 1000000) + "?";
+	document.write('<' + 'SCRIPT language="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/womensforum_opendiary.l90/;sz=1x2;ord=' + ord + '"><' + '/SCRIPT>');
+//-->
+</SCRIPT>
+<!-- end DART 1x2  -->
+</BODY>
+</HTML>

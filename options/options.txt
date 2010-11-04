@@ -1,0 +1,2 @@
+$LIVEJOURNAL_USER: username for livejournal
+$LIVEJOURNAL_PASSWD: password for livejournal

@@ -1,0 +1,29 @@
+Change log for xmldiff
+
+0.6.2:          _ return number of difference on command line
+		_ reintroduce misc.list_print which caused recursive mode
+                  to fail
+		_ use psyco if available (http://psyco.sf.net)
+                _ little changes in C extension
+		
+0.6.1:          _ fix packaging problems
+
+0.6.0:          _ change of the internal representation
+		_ remove support for the EZS algorithm (no more maintened
+  		  for the moment)
+		_ add command line options to parse html and to control
+		  entities inclusion and output encoding
+		_ fixing coalescing text nodes bug
+		_ many other bugs fixes
+		_ great speed improvement
+
+0.5.3:          _ add __init__.py in "logilab" directory
+	
+0.5.2:          _ bug fixes in xupdate formatting and in the dom interface.
+	
+0.5.1:          _ Fast Match / Edit Scritp algorithm, now fully usable
+	 	_ fixes Unicode problem
+	
+O.2.1:		_ bug fixes, optimizations for ezs algorithm
+	
+0.1.1:  	_ original revision

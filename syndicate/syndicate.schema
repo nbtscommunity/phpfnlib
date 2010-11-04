@@ -1,0 +1,22 @@
+CREATE TABLE syndicate (
+	id	integer not null auto_increment,
+	article	text,
+	source	varchar(128),
+	author	varchar(128),
+	title	varchar(128),
+	timestamp timestamp,
+	language  varchar(5) default 'en-US',
+	publicationdate	datetime,
+	location	varchar(255),
+	primary key(id)
+);
+
+CREATE TABLE syndicate_references (
+	id	integer,
+	type enum('uri', 'print', 'broadcast'),
+	rel	enum('quote', 'more', '
+	reference	varchar(255)
+);
+
+-- CREATE TABLE syndicate_comments (
+	

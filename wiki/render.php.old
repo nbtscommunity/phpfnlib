@@ -1,0 +1,838 @@
+<?php
+	
+	require_once(dirname(__FILE__)."/../html.php");
+	require_once(dirname(__FILE__)."/../utf8.php");
+	require_once(dirname(__FILE__)."/../text/wordwrap2.php");
+
+	/*
+	 * Wiki Options
+	 * 
+	 * Options:
+	 * 	WIKI_BRACKETLINKS -- boolean -- link words surrounded with []
+	 * 	WIKI_BRACKETLINKS_NATURAL -- boolean -- link words "..." (url) or
+	 *		Proper Name (url)
+	 * 	WIKI_VERIFYBRACKETLINKS -- boolean -- verify link destinations
+	 *  WIKI_INTERWIKI_NATURAL -- boolean -- use natural-language interwiki
+	 *  	links, such as "FooBar on MeatBall" or "FooBar (on MeatBall)" 
+	 *  WIKI_PERSONALPAGES -- boolean -- Link to personal pages with
+	 *  	"--Person" or "Person's Page"
+	 * 	WIKI_WIKIWORDS -- boolean -- link BumpyCapsWords as links
+	 * 	WIKI_VERIFYWIKIWORDS -- string or NULL -- string should be a path to
+	 * 		look in for files containing existant wiki page names
+	 *  WIKI_LINKEMAILS -- boolean -- link name@add.ress'es
+	 *  WIKI_REFERENCE -- boolean -- reference external data in a wiki
+	 *  	document: SQL tables, images, &c.
+	 *	WIKI_UNKNOWN_WIKIWORD_URL_SUFFIX -- Suffix to add to links of
+	 *		unknown WikiWords.
+	 *	WIKI_HEADINGLEVEL -- integer -- heading level
+	 *	WIKI_UTF8 -- boolean -- Use UTF-8 encoding
+	 */
+
+	if(!defined("WIKI_EXPERIMENTAL")) {
+		define("WIKI_EXPERIMENTAL", FALSE);
+	}
+	
+	if(!defined("WIKI_UTF8")) {
+		define("WIKI_UTF8", FALSE);
+	}
+
+	if(!defined("WIKI_WIKIWORDS")) {
+		define("WIKI_WIKIWORDS", FALSE);
+	}
+	
+	if(!defined("WIKI_VERIFYWIKIWORDS")) {
+		define("WIKI_VERIFYWIKIWORDS", FALSE);
+	}
+
+	if(!defined("WIKI_PERSONALPAGES")) {
+		define("WIKI_PERSONALPAGES", FALSE);
+	}
+	
+	if(!defined("WIKI_REFERENCE")) {
+		define("WIKI_REFERENCE", FALSE);
+	}
+	
+	if(!defined("WIKI_LINKEMAILS")) {
+		define("WIKI_LINKEMAILS", TRUE);
+	}
+	
+	if(!defined("WIKI_BRACKETLINKS")) define("WIKI_BRACKETLINKS", FALSE);
+	if(!defined("WIKI_BRACKETLINKS_NATURAL"))
+		define("WIKI_BRACKETLINKS_NATURAL", FALSE);
+	
+	if(!defined("WIKI_LOGINS")) define("WIKI_LOGINS", FALSE);
+
+	if(!defined("WIKI_PAGEDIR")) {
+		define("WIKI_PAGEDIR", dirname($SCRIPT_FILENAME));
+	}
+	if(!$WIKI_PAGEDIR) {
+		$WIKI_PAGEDIR = WIKI_PAGEDIR;
+		if($t{count($t) - 1} != '/') {
+			$WIKI_PAGEDIR .= '/';
+		}
+	}
+
+	if(!defined("WIKI_INTERWIKI_NATURAL")) {
+		define("WIKI_INTERWIKI_NATURAL", FALSE);
+	}
+	
+	if(!defined("WIKI_UNKNOWN_WIKIWORD_URL_SUFFIX")) {
+		define("WIKI_UNKNOWN_WIKIWORD_URL_SUFFIX", '');
+	}
+
+	if(!defined("WIKI_HEADINGLEVEL")) {
+		define("WIKI_HEADINGLEVEL", 2);
+	}
+
+	if(!defined("WIKI_OLD_LISTS")) {
+		define("WIKI_OLD_LISTS", FALSE);
+	}
+	
+	if(!defined("WIKI_BASE64")) define("WIKI_BASE64", TRUE);
+
+	if(WIKI_REFERENCE) {
+		require_once(dirname(__FILE__)."/../mysql.php");
+	}
+
+	/*
+	if(!defined("WIKI_FOOTNOTES")) {
+		if(WIKI_BRACKETLINKS) {
+			define("WIKI_FOOTNOTES", FALSE);
+		} else {
+			define("WIKI_FOOTNOTES", TRUE);
+		}
+	}
+	*/
+
+	/*
+	 * Output Buffering for text/wiki to text/html conversion
+	 */
+
+	function ob_wiki($str) {
+		return wiki_render($str);
+	}
+
+	/*
+	 * text/wiki to text/html Rendering function
+	 */
+
+	function wiki_render($text, $params = array(), $depth = 0) {
+		if(!is_array($text)) {
+			if(!WIKI_UTF8 and $depth == 0) {
+				$text = utf8_decode($text);	
+			}
+			$text = preg_split(
+				'/^\s*$|^(?=\s*-.*-\s*$)/m', str_replace("\r", '', $text));
+		}
+
+		if(count($text) == 0) return;
+
+		$o .= wiki_render_paragraph(array_shift($text));
+		$o .= wiki_render($text, $params, $depth + 1);
+
+		if($depth <= 0) {
+			$o = wiki_do_links($o);
+		}
+
+		if(!WIKI_UTF8 and $depth == 0) {
+			$o = utf8_encode($o);
+		}
+
+		return $o;
+	}
+
+	function wiki_link($target, $text, $unknown = FALSE, $version = 'Current', $fullurl = false) {
+		global $WIKI_PAGEDIR, $WIKI_REPOSITORY, $_SERVER;
+		if($fullurl) {
+			$prefix = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME'].'/';
+		}
+		$cur = $version == 'Current';
+		if($cur) {
+			$realversion = key(rcs_get_revisions($WIKI_PAGEDIR.$target));
+		} else {
+			$realversion = $version;
+		}
+		return(
+			($unknown ? "<span class='wikiwordunknown'>$text" : "").
+			'<a href="'.$prefix.utf8purlencode($target).
+				($realversion?";$realversion":'').
+				'"'.($realversion ? 
+					' title="'.$text." v$realversion".
+						($cur ? ' (Current)':'').'"': '').
+				($unknown ? '' : ' class="wikiword"').
+				'>'.
+				($unknown? '?' : $text).'</a>'.
+				($unknown? '</span>' : ''));
+	}
+
+
+	function wiki_do_links($o) {
+		global $PHP_SELF, $WIKI_PAGEDIR;
+		$res = array();
+		$regopts = '';
+		$u8cap = 'A-ZÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞĀĂĄĆĈĊČĎĐĒĔĖĘĚĜĞĠĢĤĦĨĪĬĮİĲĴĶĹĻĽĿŁŃŅŇŊŌŎŐŒŔŖŘŚŜŞŠŢŤŦŨŪŬŮŰŲŴŶŸŹŻŽǺǼǾΆΈΉΊΌΎΏАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯẀẂẄỲ';
+		$u8low = 'a-zàáßâãäåæçèéêëìíîïðñòóôõöùúûüýþÿāăąćĉċčďđēĕėęěĝğġģĥħĩīĭįıĳĵķĸĺļľŀłńņňŉŋōŏőœŕŗřśŝşšţťŧũūŭůűųŵŷźżžſǻǽǿάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώабвгдежзийклмнопрстуфхцчшщъыьэюяёђѓєѕіїјљњћќўџґẁẃẅỳ';
+		if(!WIKI_UTF8) {
+			//$cap = str_replace('?', '', utf8_decode($cap));
+			//$low = str_replace('?', '', utf8_decode($low));
+			$regopts .= 'u';
+		}
+		$propernamere = '[A-Z][a-z]+(?:\s+[A-Z][a-z])*';
+		$urlre = '(?i:(?:http|https|ftp|news|imap)://[-a-z0-9.]*(?:/[-a-z.~=/%&;?,0-9_]*[a-z=/%0-9_])?/?)';
+		$wikiwordre = "(?:[.]?|[\\#]?)\b[A-Z][0-9a-z']*[A-Z][0-9a-z'A-Z]*\b"; 
+		if(WIKI_BRACKETLINKS_NATURAL) {
+			$blnaturalre =
+			"(\".*?\"|$propernamere)\s+\($urlre|(${res['wikiwords']})\)";
+			$res[] = $blnaturalre;
+		}
+		if(WIKI_INTERWIKI_NATURAL) {
+			$interwikire = '('.$wikiwordre.')\s*\(?on\s*(MeatBall|TheOriginalWiki|NBTSCNomicWiki|NomicWiki|OldWiki)\)?';
+			$res[] = $interwikire;
+		}
+		if(WIKI_WIKIWORDS) {
+			$res['wikiwords'] = $wikiwordre;
+		} 
+
+		$res['the-page'] = "(?:(?i:the)\\s([A-Z][a-z]+)\\s(?i:page))";
+
+		if(WIKI_PERSONALPAGES) {
+			$personalpagere = "&#x2014;".
+				"((?:[A-Z][a-z]+\\s?)+([A-Z]{1,2}[.]?)?)".
+				"|((?:[A-Z][a-z]+\\s?)*[A-Z][a-z]+".
+					"(?:\\s[A-Z]{1,2}[.]?)?)'s [pP]age".
+				"|(?<!ed )\\bby((?:\s+[A-Z][a-z]+)+)\\b(?!\\w)";
+			$res[] = $personalpagere;
+		}
+		$res['url'] = '\b'.$urlre;
+		if(WIKI_BRACKETLINKS) {
+			$res[] = '[[][^|<]+?[]]';
+			$res[] = "[[][^|<]*?\|[^|<]*?[]]";
+		} /*elseif(WIKI_FOOTNOTES) {
+			$res[] = '\[-?[0-9]+\]';
+		}*/
+		if(WIKI_LINKEMAILS) {
+			$res['emails'] =
+				'\b[-a-zA-Z0-9+&_.]+@[-a-z0-9A-Z.]+\.[-A-Z0-9a-z.]+\b';
+		}
+		if(count($res) == 0) { return '<!-- no link styles enabled! -->'.$o; }
+		$linkre = '#'. join('|', $res)."#ms$regopts";
+		print("Link Regex: ".htmlspecialchars($linkre)."<br />");
+		#print("<pre>".htmlspecialchars(vdump($res))."</pre>");
+		$validwikiwords = array();
+		$invalidwikiwords = array();
+		$urls = array();
+		if(WIKI_VERIFYWIKIWORDS) {
+			$wikipagestore = $WIKI_PAGEDIR;
+			$allwikiwords = wiki_get_all_pagenames($wikipagestore);
+		}
+		if(preg_match_all($linkre, $o, $matches, PREG_PATTERN_ORDER)) {
+			$pieces = preg_split($linkre, $o);
+			$o = '';
+			foreach($matches[0] as $wikiword) {
+				print('<br />'.$wikiword);
+				$prelinktext = $linktext = $postlinktext = '';
+				if(preg_match($re='/(?:&gt;|>)$/', $wikiword)) {
+					$wikiword = preg_replace($re, '', $wikiword);
+					$postlinktext = '&gt;'.$postlinktext;
+				}
+				$o .= array_shift($pieces);
+				if(preg_match('!^(http|https|news|imap|ftp)://!', $wikiword)) {
+					$o .= $prelinktext.
+						hyperlink($wikiword, $wikiword, false).
+					$postlinktext;
+					continue;
+				} else {
+					if(WIKI_BRACKETLINKS and $wikiword{0} == '[') {
+						if(preg_match('#\[([^|<]+?)\]#', 
+							$wikiword, $matches)) {
+							$o .= wiki_bracketlink($matches[1], $matches[1]);
+						} elseif(preg_match('#\[([^|<]*?)\|([^|<]*?)\]#',
+							$wikiword, $matches)) {
+							$o .= wiki_bracketlink($matches[1], $matches[2]);
+						} else {
+							// This shouldn't happen.
+							$o .= $wikiword;
+						}
+						continue;
+					} /*elseif(WIKI_FOOTNOTES and $wikiword[0] == '[') {
+						$o .= "<a href='#footnote-$wikiword' name='footnote-ref-$wikiword'>$wikiword</a>";
+					} */
+					if($wikiword{0} == '.') {
+							$o .= $wikiword;
+							continue;
+					} elseif(WIKI_BRACKETLINKS_NATURAL 
+						and preg_match('#'.$blnaturalre.'#',
+							$wikiword, $matches)) {
+						$o .= wiki_bracketlink($matches[2], $matches[1]);
+					} elseif(WIKI_LINKEMAILS and preg_match('/'.$res['emails'].'/', $wikiword)) {
+						if(WIKI_LOGINS and !is_logged_in()) {
+							$wwtemp = str_replace(array("@" , '.'), array(' at ', 'dot'), $wikiword);
+							$o .= $prelinktext.
+								"<a href='mailto:$wwtemp'>$wwtemp</a>".
+								$postlinktext;
+						} else { 
+							$o .= $prelinktext.
+								"<a href='mailto:$wikiword'>$wikiword</a>".
+								$postlinktext;
+						}
+						continue;
+					} elseif(WIKI_INTERWIKI_NATURAL and
+						preg_match('/'.$interwikire.'/', $wikiword,
+							$matches)) {
+						if($matches[2] == 'MeatBall') {
+							$uri = 'http://www.usemod.com/cgi-bin/mb.pl?%s';
+						} elseif($matches[2] == 'TheOriginalWiki') {
+							$uri = 'http://c2.com/cgi-bin/wiki?%s';
+						} elseif($matches[2] == 'NBTSCNomicWiki') {
+							$uri = 'http://community.nbtsc.org/wiki/Nomic/%s';
+						} elseif($matches[2] == 'NomicWiki') {
+							$uri = 'http://www.nomic.net/~nomicwiki/index.php/%s';
+						} elseif($matches[2] == 'OldWiki') {
+							$uri = 'http://community.nbtsc.org/oldwiki/%s.html';
+						}
+						if($uri) {
+							$o .= $prelinktext.
+								hyperlink(sprintf($uri, $matches[1]),
+									$matches[0]).
+								$postlinktext;
+							unset($uri);
+						} else {
+							$o .= $prelinktext.$matches[0].$postlinktext;
+						}
+					} elseif(WIKI_WIKIWORDS) {
+						if(preg_match("#".$res['the-page']."#", 
+								$wikiword, $matches)) {
+							$linktext = trim($wikiword);
+							$wikiword = $matches[1];
+						} elseif(WIKI_PERSONALPAGES and $wikiword{0} == '&') {
+							preg_match("/$personalpagere/$regopts", 
+								$wikiword, $matches);
+							$linktext = trim($wikiword);
+							$wikiword = str_replace('.', '', trim($matches[1]));
+						} elseif(WIKI_PERSONALPAGES 
+							and (substr($wikiword, -7) == "'s page" 
+								or substr($wikiword, -7) == "'s Page")) {
+							preg_match("/$personalpagere/", 
+								$wikiword, $matches);
+							$linktext = $wikiword;
+							$wikiword = str_replace('.', '', trim($matches[3]));
+						} elseif(WIKI_PERSONALPAGES
+							and(substr($wikiword, 0, 3) == 'by ')) {
+							preg_match("/$personalpagere/", 
+								$wikiword, $matches);
+							$wikiword = trim($matches[4]);
+							$linktext = $wikiword;
+							$prelinktext .= "by ";
+							$wikiword = str_replace('.', '', $wikiword);
+						} else {
+							$linktext = $wikiword;
+						}
+						if(WIKI_VERIFYWIKIWORDS) {
+							if(WIKI_UTF8) { 
+								$u8wikiword = $wikiword; 
+							} else {
+								$u8wikiword = utf8_encode($wikiword);
+							}
+							if(in_array($u8wikiword, $allwikiwords)) {
+								$o .= 
+									$prelinktext.
+									wiki_link($wikiword, $linktext, false).
+									$postlinktext;
+								continue;
+							} else {
+								$o .= sprintf(
+									$prelinktext.
+									"<span class='wikiwordunknown'>".
+										$linktext.
+										"<a href='%s".
+											WIKI_UNKNOWN_WIKIWORD_URL_SUFFIX.
+										"'>?</a>".
+									"</span>".
+									$postlinktext, 
+									utf8urlencode($wikiword));
+								continue;
+							}
+						} else {  // !WIKI_VERIFYWIKIWORDS
+							$o .= sprintf(
+									$prelinktext.
+									"<a href='$wikisite' class='wikiword'>".
+										"$wikiword</a>".
+									$postlinktext,
+									utf8urlencode($wikiword));
+							continue;
+						}
+					}
+				}
+			}
+			if(count($pieces > 1)) {
+				comment("Ach, too many pieces!");
+			}
+			foreach($pieces as $piece) {
+				$o .= $piece;
+			}
+		}
+		return $o;
+	}
+
+	function wiki_render_list($paragraph) {
+		if(WIKI_OLD_LISTS and preg_match("/^\s*\*\s*\*/ms", $paragraph)) { 
+			// Old markup compatibility
+			return wiki_render_prefixed_lines($paragraph, '*', 'ul', 'li');
+			//return wiki_render_list_multisplat($paragraph);
+		} else {
+//			print("NEw list".br);
+			$lines = explode("\n", $paragraph);
+			$indents = array();
+			$ci = array('min' => 0, 'max' => 0);
+			$tree =& new ListTree();
+			$root =& $tree;
+
+			foreach($lines as $line) {
+				$i = strlen($line) - strlen(ltrim($line));
+				$line = trim($line);
+				if($line{0} == '*') {
+					$bullet = $i + 1;
+					$line = trim(substr($line, 1));
+					$ti = $bullet;
+				} else {
+					$bullet = 0;
+					$ti = $i;
+				}
+				if(count($indents) == 0 and $ci['max'] == 0) $ci['max'] = $ti;
+				if($ti > $ci['max']) {
+					if($bullet) {
+						$indents[] = $ci;
+						$ci = array('min' => $ci['max'] + 1, 'max' => $bullet);
+						$new =& $tree->add(new ListTree()); // add and descend
+						$tree =& $new;
+					} else {
+						$ci['max'] = $ti;
+					}
+				} elseif($ti < $ci['min']) {
+					while($ti < $ci['min'])  {
+						$ci = array_pop($indents);
+						if($tree->parent) $tree =& $tree->parent;
+					}
+				}
+				$line = trim($line);
+				if(!$line) continue;
+				if($bullet) {
+					$tree->addcopy($line);
+/*					print("Add: ");
+					print("Ci=(".$ci['min'].",".$ci['max'].") ");
+					print("&lt;".count($indents)."&gt;");
+					print($line.br);
+*/
+				} else {
+					end($tree->children);
+					$tree->children[key($tree->children)] .= $line;
+/*
+					print("Append: ");
+					print("Ci=(".$ci['min'].",".$ci['max'].") ");
+					print("&lt;".count($indents)."&gt;");
+					print($line.br);
+*/
+				}
+//				print_r($root);
+			}
+
+			$o = $root->as_string();
+
+			//$o .= wiki_render_parsed_list($stack);
+			return $o."\n";
+		}
+	}
+
+	function wiki_render_list_multisplat($paragraph) {
+		$parts = preg_split("/^\s*\*\s*/sm", $paragraph);
+		foreach($parts as $part) {
+			if($part) {
+				$o .= li(wiki_render_paragraph($part, FALSE));
+			}
+		}
+		return(ul($o));
+	}
+
+	function wiki_render_quoted($paragraph) {
+		$paragraph = preg_replace("/^>\s*/ms", '', $paragraph);
+		return '<blockquote class="quote"><p>'.wiki_render_paragraph($paragraph).'</p></blockquote>';
+	}
+
+
+	function wiki_render_mime_header($paragraph) {
+		$paragraph = htmlspecialchars($paragraph);
+		return("<pre>$paragraph</pre>");
+	}
+
+	function wiki_render_definitions($paragraph) {
+		$parts = explode("\n", $paragraph);
+		$o .= '<table>';
+		$stack = array();
+		foreach($parts as $part) {
+			if(preg_match('/^([^.,!:]+):([^:]+)$/s', $part, $matches)) {
+				list(,$term, $def) = $matches;
+				while(count($stack) > 0) {
+					$o .= '</' . array_pop($stack).'>';
+				}
+				$o .= "<tr><th>" . wiki_render_simple($term) . ":</th>".
+					"<td>" . wiki_render_simple($def) ."\n";
+				array_push($stack, 'tr');
+				array_push($stack, 'td');
+			 } else {
+				$o .= $part. "\n";
+			 }
+		}
+		while(count($stack) > 0) {
+			$o .= '</' . array_pop($stack). '>';
+		}
+		$o .= '</table>';
+		return($o);
+	}
+
+	function wiki_render_irc($paragraph) {
+		$parts = explode("\n", $paragraph);
+		foreach($parts as $part) {
+			if($part[0] == '*') {
+				$class  = 'action';
+			} else {
+				$class = 'speech';
+			}
+			$o .= "\n<div class='$class'>" . htmlentities($part) . "</div>";
+		} 
+		return("\n<div class='ircquotation'>$o</div>");
+	}
+
+	function wiki_render_paragraph($paragraph, $wrap = 'p') {
+		// KLUDGE: the incoming paragraphs often have first-line markup, and
+		// so must be re-fed into this function when the first line is
+		// stripped and rendered.  This is due to the fact that look-behind
+		// assertions in the split-regex in wiki_render() must be
+		// fixed-length and positive width.
+
+		$paragraph = substr($paragraph, strspn($paragraph, "\n"));
+
+		$tparagraph = trim($paragraph);
+		/*if(preg_match($re="/^.*:\s*$/m", $paragraph, $matches)) {
+			return(wiki_render_simple($matches[0])."<br />".wiki_render_paragraph(preg_replace($re, '', $paragraph)));
+		} else*/if(preg_match('/(^[^.,! :>]+:[^:]+$(.*)){2,}/ms', $paragraph) 
+			and !preg_match('/[^:]*http:/ms', $paragraph)) {
+				return wiki_render_definitions($paragraph);
+		} elseif(preg_match('/^<[a-z]+>/i', $paragraph)) {
+			return wiki_render_irc($paragraph);
+		} elseif($tparagraph[0] == '*') {
+			return wiki_render_list($paragraph);
+		} elseif(preg_match($re="/^\s*-{4,140}\s*$/m", $paragraph)) {
+			list($a, $b) = preg_split($re, $paragraph);
+//			return(wiki_render_paragraph($a)."<hr
+//			/>".wiki_render_paragraph($b));
+			return ("<hr />".
+				wiki_render_paragraph(preg_replace($re, '', $paragraph)));
+		} elseif($tparagraph[0] == '>') {
+			return '<blockquote>'.wiki_render_prefixed_lines($paragraph, '>', 
+				'p', FALSE).'</blockquote>';
+		} elseif(preg_match($re="/^\s*-(.*?)-$/mA", $paragraph, $matches)) {
+			// Headings
+			return "\n".heading(WIKI_HEADINGLEVEL,
+			wiki_render_simple($matches[1]))."\n" . 
+				wiki_render_paragraph(preg_replace($re, '', $paragraph));
+		} elseif(preg_match("/^ /m", $paragraph)) {
+			return wiki_render_simple($paragraph, 'pre');
+		/*} elseif(WIKI_FOOTNOTES and preg_match_all($re='/^\[(-?[0-9]+)\]/', $paragraph, $matches, PREG_PATTERN_ORDER)) {
+			$parts = preg_split($re,$paragraph);
+			foreach($parts as $part) {
+				$o .= wiki_render_simple($part);
+				if(count($matches[0]) > 0) $o .= array_shift($matches[0]);
+			}
+			return $o;
+			$paragraph = preg_replace($re, '<a href="#footnote-ref-\1" name="footnote-\1">\0</a>', $paragraph);
+		*/
+		} elseif(preg_match("/^To:|^From:|^Title:/", $paragraph)) {
+			return wiki_render_mime_header($paragraph);
+		} else {
+			return wiki_render_simple($paragraph, $wrap);
+		}
+	}
+
+	function getnprefix($text, $prefix) {
+		if($prefix == ' ') {
+			return(strspn($text, ' '));
+		} else {
+			return(strspn($text, $prefix." ") - strspn(str_replace($prefix, '', $text), ' '));
+		}
+	}
+
+	function wiki_render_prefixed_lines($text, $prefix = ' ', $sectiontag = 'ul', $itemtag = 'li') {
+		$text = explode("\n", $text);
+		$previ = 0;
+		$level = 0;
+		foreach($text as $line) {
+			$i = getnprefix($line, $prefix);
+			$line = substr($line, strspn($line, $prefix.' '));
+			if($line) {
+				if($i > $previ) {
+					while($level < $i) {
+						if($sectiontag) $o .= "<$sectiontag>\n";
+						$level++;
+					}
+					if($itemtag) $o .= "<$itemtag>";
+					$o .= wiki_render_simple("$line\n");
+					if($itemtag) $o .= "</$itemtag>";
+				} elseif ($i < $previ) {
+					while($level > $i) {
+						if($sectiontag) $o .= "</$sectiontag>\n";
+						$level--;
+					}
+					if($itemtag) $o .= "<$itemtag>";
+					$o .= wiki_render_simple("$line\n");
+					if($itemtag) $o .= "</$itemtag>";
+				} else {
+					if($itemtag) $o .= "<$itemtag>";
+					$o .= wiki_render_simple("$line\n");
+					if($itemtag) $o .= "</$itemtag>";
+				}
+				$previ = $i;
+			}
+		}
+		while($level > 0) {
+			if($sectiontag) $o .= "</$sectiontag>\n";
+			$level--;
+		}
+			
+		return $o;
+	}
+
+	function wiki_render_simple($paragraph, $wrap = FALSE) {
+		$mod = 'ms';
+		if(trim($paragraph) == '') return '';
+		
+		if($wrap == 'pre') {
+			$mod = 's';
+			$nchars = "\n";
+			
+			$parts = explode("\n", $paragraph);
+			foreach($parts as $k => $part) {
+				$parts[$k] = wordwrap(rtrim($part), 76, "\n    ");
+			}
+			$paragraph = join("\n", $parts);
+		}
+
+		$paragraph = htmlspecialchars($paragraph);
+
+		$paragraph = preg_replace("#\s/\s*\$#$mod", '<br>', $paragraph);
+
+		// italics
+		$paragraph = preg_replace("%(?<!/)\B/([^/$nchars].+?)/\B%i$mod",
+			"<em>\\1</em>",
+			$paragraph
+		);
+
+		// bold
+		$paragraph = preg_replace("/\B(?<!-)-([^-$nchars].+?)-\B/i$mod",
+			"<strong>\\1</strong>",
+			$paragraph
+		);
+								
+		//underline
+		$paragraph = preg_replace("/\b(?<!_)_([^_$nchars]+?)_\b/i$mod",
+			"<u>\\1</u>",
+			$paragraph
+		);
+		
+		//code/monospace
+		$paragraph = preg_replace("/\B(?<!=)=([^=$nchars].+?)=\B/i$mod",
+			"<code>\\1</code>",
+			$paragraph
+		);
+
+		//references
+		if(WIKI_REFERENCE) {
+			$paragraph = preg_replace("/\B(?<!&lt;)&lt;(.*?)&gt;\B/e$mod",
+				'wiki_reference("\\1")', $paragraph);
+		}
+
+		// superscript
+		$paragraph = preg_replace("/\^([^\^$nchars]+?)\^/i$mod",
+			"<sup><small>\\1</small></sup>", 
+			$paragraph
+		); 
+
+		$paragraph = preg_replace('/^-{4,140}\s*$/m', "<hr />", $paragraph);
+		$paragraph = preg_replace('/--/', '&#x2014;', $paragraph);
+
+		$paragraph = str_replace(array("\r\n", "\r"), "\n", $paragraph);
+
+		if($wrap) { $paragraph = "<$wrap>$paragraph</$wrap>\n"; }
+		
+		$paragraph = str_replace("<br>", '<br />', $paragraph);
+		
+		return $paragraph;
+	}
+
+	function wiki_reference($uri) {
+		if(preg_match('/(jpg|gif|png|jpeg)$/i', $uri)) {
+			return("<img src='".pqurlencode($uri)."' alt='Image' />");
+		} else {
+			$data = get_uri($uri);
+			return("<cite from='$uri'>From ".htmlspecialchars($uri).":$data</cite>");
+		}
+	}
+
+	function get_uri($uri) {
+		$parts = parse_url($uri);
+		if($parts['scheme'] == 'mysql') {
+			if($parts['user']) {
+				$username = $parts['user'];
+			} else {
+				$username = MYSQL_USERNAME;
+			}
+			if($parts['pass']) {
+				$password = $parts['pass'];
+			} else {
+				$password = MYSQL_PASSWORD;
+			}
+			if($parts['host']) {
+				$host = $parts['host'];
+			} else {
+				$host = MYSQL_DEFAULT_HOST;
+			}
+			if($parts['path']) {
+				list($dummy, $database, $table) = explode('/', $parts['path']);
+			} else {
+				$database = MYSQL_DATABASE;
+				$table = 'default';
+			}
+			$db = mysql_connect($host, $username, $password);
+			mysql_select_db($database, $db);
+			if($r = mysql_query($q = "SELECT * FROM $table")) {
+				$r = mysql_fetch_all($r);
+				if(count($r) > 0) {
+					$o .= '<tr>';
+					foreach($r[0] as $column => $data) {
+						$o .= '<th>'.$column.'</th>';
+					}
+					$o .= '</tr>';
+					foreach($r as $row) {
+						$o .= '<tr>';
+						foreach($row as $field => $value) {
+							$o .= '<td>'.$value.'</td>';
+						}
+						$o .= '</tr>';
+					}
+					$o = '<table>'.$o.'</table>';
+				} else {
+					$o = "<br />No data in table $table";
+				}
+				return $o;
+			} else {
+				return "Query $q failed: ".mysql_error();
+			}
+		}
+	}
+
+	function wiki_get_all_pagenames($store) {
+		$o = array();
+		if(is_dir($store)) {
+			$d = opendir($store);
+			while($e = readdir($d)) {
+				if($e[0] != '.') {
+					$o[] = $e;
+				}
+			}
+			asort($o);
+		}
+		return $o;
+	}
+
+	class ListTree {
+		function ListTree() {
+			$this->id = uniqid(get_class($this));
+		}
+		
+		var $children = array();
+		function &add(&$node) {
+			$this->children[] =& $node;
+			if(is_a($node, 'ListTree')) {
+				$node->parent =& $this;
+			}
+			return $node;
+		}
+
+		function &addcopy($node) {
+			$this->children[] =& $node;
+			if(is_a($node, 'ListTree')) {
+				$node->parent =& $this;
+			}
+			return $node;
+		}
+
+		function as_string() {
+			$o = array();
+			foreach($this->children as $node) {
+				if(is_object($node)) {
+					$t = array_pop($o);
+					$r = $node->as_string();
+					$o[] = $t.$r;
+				} else {
+					$o[] = wiki_render_simple($node);
+				}
+			}
+			if(count($o)) {
+				$r = '';
+				foreach($o as $v) {
+					$r .= li($v)."\n";
+				}
+				return ul($r);
+			} else {
+				return '';
+			}
+		}
+	}
+
+	function wiki_bracketlink($dest, $text) {
+		global $WIKI_PAGEDIR;
+		if($text > 0) {
+			return('['.($dest != $text ? $dest.'|' : '').$text.']');
+		}
+		if(substr($text, 0, 4) == 'Ed: ') {
+			return("[".substr($text, 4).']');
+		}
+		if(WIKI_VERIFYWIKIWORDS) {
+			$wikipagestore = $WIKI_PAGEDIR;
+			$allwikiwords = wiki_get_all_pagenames($wikipagestore);
+		}
+		if(preg_match('#^http://#i', $dest)) {
+			return sprintf("<a href='%s' class='wikiword'>$text</a>",
+			$dest);
+		}
+		if(WIKI_VERIFYBRACKETLINKS) {
+			if(WIKI_UTF8) { 
+				$u8dest = $dest; 
+			} else {
+				$u8dest = utf8_encode($dest);
+			}
+			if(in_array($u8dest, $allwikiwords)) {
+				$o .= sprintf(
+					"<a href='%s' class='wikiword'>".
+						"$text</a>",
+					utf8urlencode($dest));
+			} else {
+				$o .= sprintf(
+					"<span class='wikiwordunknown'>".
+						$text.
+						"<a href='%s".
+							WIKI_UNKNOWN_WIKIWORD_URL_SUFFIX.
+						"'>?</a>".
+					"</span>",
+					utf8urlencode($dest));
+			}
+		} else {  // !WIKI_VERIFYWIKIWORDS
+			$o .= sprintf(
+					"<a href='%s' class='wikiword'>".
+						"$text</a>",
+					utf8urlencode($dest));
+		}
+		return $o;
+	}
+	
+	// vim: encoding=utf-8 fileencoding=utf-8 termencoding=iso8859-1
+?>

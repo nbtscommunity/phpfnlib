@@ -1,0 +1,303 @@
+<HTML>
+<HEAD>
+<TITLE>
+Psychedelic Mango              - Revenge of the Serial Bores                       
+</TITLE>
+<SCRIPT LANGUAGE="javascript">
+<!-- hide
+var txt="Are you sure you want to delete checked notes?"
+function enterOrNot(){
+        if (!confirm (txt)){return false;}
+		else return true;}		
+var txt2="Are you sure you want to delete this entry?"		
+function deleteConfirm(){
+        if (!confirm (txt2)){return false;}
+		else return true;}		
+// unhide -->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF                          LINK=blue VLINK=blue MARGINHEIGHT=0 MARGINWIDTH=0 TOPMARGIN=0 LEFTMARGIN=0>
+<TABLE WIDTH=100% CELLPADDING=0 CELLSPACING=0 BORDER=0>
+<TR>
+<TD WIDTH=136 VALIGN=bottom>
+<!-- site logo -->
+<A HREF=default.asp><IMG SRC=images/odlogo2.gif WIDTH=136 HEIGHT=124 BORDER=0 ALT="The Open Diary"><BR></A>
+</TD>
+<TD ALIGN=center>
+<!-- begin ad space -->
+<TABLE WIDTH=590 BORDER=0 CELLSPACING=0 CELLPADDING=0>
+<TR>
+<TD COLSPAN=3>
+<!-- masthead -->
+<SCRIPT LANGUAGE="JavaScript"><!--
+function MHPopup(url) {
+  var mhpopup = window.open(url,"wfpopup","scrollbars=yes,resizable=no,status=0,width=300,height=300");
+  if(!mhpopup.opener) mhpopup.opener = window;
+  mhpopup.focus();
+} // MHPopup
+// -->
+</SCRIPT>
+<MAP NAME="mhmapwf">
+<AREA SHAPE="RECT" HREF="http://www.womensforum.com/" COORDS="0,0,204,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/channels.html')" COORDS="205,0,333,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/contests.html')" COORDS="205,15,333,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/toppicks.html')" COORDS="336,0,464,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/interact.html')" COORDS="336,15,464,29" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/newsletters.html')" COORDS="467,0,595,14" TARGET="_parent">
+<AREA SHAPE="RECT" HREF="javascript:MHPopup('http://masthead.womensforum.com/OpenDiary/aboutwf.html')" COORDS="467,15,595,29" TARGET="_parent">
+</MAP>
+<IMG SRC="http://www.opendiary.com/images/masthead-border-violethaze.gif" HEIGHT="30" WIDTH="600" BORDER="0" USEMAP="#mhmapwf"><BR CLEAR=ALL>
+<!-- end masthead -->
+</TD>
+</TR>
+<TR>
+<TD ALIGN=right VALIGN=top>
+<!-- begin 120 button -->
+<a href="http://www.commission-junction.com/track/track.dll?AID=193835&PID=654602&URL=http%3A%2F%2Fwww%2Ehalf%2Ecom" target="_top">
+<img src="http://www.commission-junction.com/banners/tracker.exe?PID=654602&AID=193835&banner=193835%2Egif" width="120" height="60" alt="Half.com: buy/sell used books, movies, music,games" border="0"></a>
+<!-- end 120 button -->
+</TD>
+<TD ALIGN=center VALIGN=top>
+<IMG SRC=images/advertiser.gif BORDER=0>
+</TD>
+<TD VALIGN=top>
+<!-- 468x60 adslot -->
+<!-- start DART 468x60 -->
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+	var ord = Math.floor(Math.random() * 1000000) + "?";
+	document.write('<IFRAME SRC="http://ad.doubleclick.net/adi/womensforum_opendiary.l90/;sz=468x60;ord=' + ord + '" name="frame1" width="468" height="60" frameborder="no" border="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no">');
+	document.write('<' + 'SCRIPT language="JavaScript1.1" SRC="http://ad.doubleclick.net/adj/womensforum_opendiary.l90/;abr=!ie;sz=468x60;ord=' + ord + '"><' + '/SCRIPT>');
+	document.write('</IFRAME>');
+//-->
+</SCRIPT>
+<NOSCRIPT>
+	<A HREF="http://ad.doubleclick.net/jump/womensforum_opendiary.l90/;sz=468x60;ord=[random_number]?">
+		<IMG SRC="http://ad.doubleclick.net/ad/womensforum_opendiary.l90/;sz=468x60;ord=[random_number]?" border=0 height="60" width="468">
+	</A>
+</NOSCRIPT>
+<!-- end DART 468x60 -->
+<!-- adslot end -->
+</TD>
+</TR>
+</TABLE>
+<nobr>
+<INPUT TYPE="hidden" NAME="SUName" VALUE="personalweb">
+<INPUT TYPE="hidden" NAME="IAM" VALUE="vpn000180_2">
+</nobr>
+</form>
+<!-- end ad space -->
+</TD>
+</TR>
+<TR>
+<TD ALIGN=left VALIGN=middle BGCOLOR=darkblue>&nbsp;</TD>
+<TD ALIGN=right BGCOLOR=darkblue><FONT FACE=arial COLOR=white SIZE=2><B>&nbsp;</B></FONT></TD>
+</TR>
+<TR>
+<TD COLSPAN=2><IMG SRC=images/yellowline.gif WIDTH=100% HEIGHT=1 BORDER=0></TD>
+</TR>
+<TR>
+<TD COLSPAN=2 BGCOLOR=#EE82EE                         >
+<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0 WIDTH=100%>
+<TR>
+<TD>
+</TD>
+<TD ALIGN=right>
+<TABLE CELLSPACING=2 BGCOLOR=#EE82EE                         >
+<TR>
+
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=diarylist.asp?list=1&start=1&min=A&max=A><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">index</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=recent.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">recent</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=random.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">random</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=search.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">search</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=theme.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">theme</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=circles.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">circles</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=http://freemail.opendiary.com><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">mail</SPAN></FONT></A></TD>
+<TD><B><FONT FACE=arial COLOR=white>|&nbsp;</FONT></B><A HREF=helpindex.asp><B><FONT FACE=arial COLOR=#483D8B SIZE=2><SPAN STYLE="TEXT-DECORATION: none">help&nbsp;</SPAN></FONT></A></TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=136 BGCOLOR=#EE82EE                          VALIGN=top>
+<TABLE CELLPADDING=4>
+
+<TR><TD>
+<FORM ACTION="express.asp" METHOD="post">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR><TD ALIGN=right><FONT FACE=arial SIZE=2 COLOR=#483D8B><B>unlock my diary</B></FONT></TD></TR>
+<TR><TD ALIGN=left>
+<INPUT NAME="logstring" SIZE=14 MAXLENGTH=30>
+</TD></TR>
+<TR><TD ALIGN=left>
+<INPUT NAME="logpw" TYPE=password SIZE=14 MAXLENGTH=30>
+</TD></TR>
+<TR><TD ALIGN=left>
+<INPUT TYPE=image WIDTH=47 HEIGHT=18 BORDER=0 SRC=images/unlockit.gif>
+<INPUT TYPE=hidden NAME=localpage VALUE=/entryview41.asp?authorcode=A302542&entry=10528>
+</TD></TR>
+</TABLE>
+</FORM>
+</TD></TR>
+
+<TR><TD ALIGN=right><A HREF="default.asp"><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">main page</SPAN></FONT></A></TD></TR>
+
+<TR><TD ALIGN=right><A HREF="entrylist.asp?authorcode=A302542"><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">diary contents</SPAN></FONT></A></TD></TR>
+<TR><TD ALIGN=right><A HREF="entrycalendar.asp?authorcode=A302542&month=12&year=2001"><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">diary calendar</SPAN></FONT></A></TD></TR>
+<TR><TD ALIGN=right><A HREF="notelist.asp?authorcode=A302542"><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">read all notes</SPAN></FONT></A></TD></TR>
+<TR><TD ALIGN=right><A HREF="readerchoice.asp?authorcode=A302542&entrycode=10528"><B><FONT FACE=arial SIZE=2 COLOR=#483D8B><SPAN STYLE="TEXT-DECORATION: none">reader's choice</SPAN></FONT></A></TD></TR>
+
+<TR><TD ALIGN=right>
+<FORM ACTION="express.asp" METHOD="post">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD ALIGN=right><FONT FACE=arial SIZE=2 COLOR=#483D8B><B>jump to a diary</B></FONT></TD></TR>
+<TR><TD ALIGN=right>
+<INPUT NAME="expressstring" SIZE=14 MAXLENGTH=20>
+</TD></TR>
+<TR><TD ALIGN=right>
+<INPUT TYPE="image" WIDTH=47 HEIGHT=18 BORDER=0 src="images/findit.gif">
+</TD></TR></TABLE>
+</FORM>
+</TD></TR>
+<TR><TD></TD></TR>
+</TABLE>
+</TD>
+<TD WIDTH=100% VALIGN=top>
+<!-- content -->
+<TABLE BORDER=0 CELLPADDING=6 WIDTH=100%>
+<TR>
+<TD ALIGN=left VALIGN=top>
+<B>
+<FONT FACE="Arial" SIZE=3  COLOR=#DDA0DD>
+...and the flame still burns                      
+<BR>
+<FONT FACE="Arial" SIZE=2 COLOR=#DDA0DD>
+by Psychedelic Mango             </B>
+</TD>
+<TD ALIGN="right" VALIGN="top" NOWRAP>
+<B>
+<FONT FACE="Arial" , arial SIZE=2 COLOR=#DDA0DD>
+
+Location: Australia                     
+<BR>
+<FONT FACE="Arial" , arial SIZE=2 COLOR=#DDA0DD>
+
+Age:&nbsp;15
+&nbsp;&nbsp;
+</B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=50%>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10527"><B><FONT FACE=arial SIZE=1 COLOR=#DDA0DD><SPAN STYLE="TEXT-DECORATION: none">previous entry : Waiting for the horde..                           </SPAN></FONT></B></A>
+
+</TD>
+<TD ALIGN=right WIDTH=50%>
+
+</TD>
+</TR>
+</TABLE>
+<HR>
+<TABLE WIDTH=100%>
+
+<TR>
+<TD>
+<B>
+<FONT FACE="Arial" , arial SIZE=3  COLOR=#DDA0DD>
+Revenge of the Serial Bores                       
+</TD>
+<TD ALIGN="right">
+<B>
+<FONT FACE="Arial" , arial SIZE=3  COLOR=#DDA0DD>
+12/24/2001
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER=0 CELLPADDING=6 WIDTH=100%>
+<TR>
+<TD WIDTH=100% VALIGN=top COLSPAN=2>
+
+<FONT FACE="Arial", arial SIZE=2  COLOR=#EE82EE>
+Time: 3.22pm<P>
+Listening to: 'Learning To Fly' - Pink Floyd<P>
+<P>
+Well, after about 3 1/2 hours, it's mostly over. The horde of serial bores descended on us about 11, and for the first hour, I managed to hide and chat on here to Arianna. About then, my mother ordered me off the computer and had to go "socialise". So I sat there looking bored for three hours, had turkey and cranberry sauce and pork and apple sauce for lunch, then got presents, then managed to escape after dessert.<P>
+<P>
+Presents...weren't bad. $200 from my folks and eithers. I can get a really good CD burner and skip Inverloch, get a cheaper one and go to Inverloch, get a really cheap one and go on a shopping spree, or just go on a shopping spree. Then I got an ergonomic keyboard from my sis, which I'm only just getting used to using. She also gave me a picture book of the Japanese legend 'Momotaro', in Japanese. The book I'm getting from my bro isn't here yet. The one real surprise was Bishop John Shelby Spong's book 'Why Christianity Must Change Or Die?', which I've wanted to read since I saw that documentary a few weeks back.<P>
+<P>
+My cousins bought me chocolates, and someone else bought me some shitty pyjamas. What I'd give for a decent nightdress, instead of the same shitty guy clothes every year. Same with some crappy, tatty black t-shirt from my folks that I'll never wear. A pink one would be much more appreciated, but they weren't to know.<P>
+<P>
+So that largely covered my day. Now, almost everyone's going to get lost and take a nap, and my bro and sis are watching Looking For Alibrandi in here.
+</TD>
+</TR>
+<TR><TD COLSPAN=2>&nbsp;</TD></TR>
+<TR>
+<TD WIDTH=50%>
+
+<A HREF="entryview41.asp?authorcode=A302542&entry=10527"><B><FONT FACE=arial SIZE=1 COLOR=#DDA0DD><SPAN STYLE="TEXT-DECORATION: none">previous entry : Waiting for the horde..                           </SPAN></FONT></B></A>
+
+</TD>
+<TD ALIGN=right WIDTH=50%>
+
+</TD>
+</TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH=100%>
+<TR>
+<TD WIDTH=136 BGCOLOR=#EE82EE                          ALIGN=center VALIGN=top>
+<IMG SRC=images/1x1spacer.gif BORDER=0 WIDTH=136 HEIGHT=1>
+</TD>
+
+<TD WIDTH=100%>
+<TABLE CELLSPACING=0 CELLPADDING=2 BORDER=0 width=100% BGCOLOR=#EE82EE                         >
+<TR> 
+<TD>
+<FONT FACE="Arial", arial SIZE=2 COLOR=#483D8B>
+Notes from readers :<BR>
+
+<FONT FACE=arial SIZE=1 COLOR=#483D8B><B>This entry accepts SAFE NOTES. You must sign into the system by unlocking your own diary before posting notes to this diary.</FONT>
+
+</TD>
+<TD ALIGN=right>
+
+</TD>
+</TR>
+</TABLE>
+<P></P>
+
+<TABLE CELLSPACING=0 CELLPADDING=2 BORDER=0 WIDTH=100%>
+
+<TR>
+
+<TD WIDTH=100% COLSPAN=2>
+
+<FONT FACE="Arial" , arial SIZE=2 COLOR=#EE82EE>
+i just chose you off random so i thought i'd note you.. i hope your haveing a happy christmas.. blagh.. too much family can get annoying! come visit my diary sometime if ya want..  <FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#DDA0DD>[<A HREF=entrylist.asp?authorcode=A433909><FONT FACE='MS Sans Serif', arial SIZE=2 COLOR=#DDA0DD>*Tricky'</A>]
+</TD>
+</TR>
+
+<TR><TD COLSPAN=2>
+
+</TD></TR>
+
+</TABLE>
+
+<BR>
+<HR>
+<TABLE WIDTH=100% CELLPADDING=1>
+<TR>
+<TD ALIGN=center VALIGN=top>
+<FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#EE82EE>Site software and design &#169 1998-2000, </FONT>
+<A HREF=http://www.opendiary.com><FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#EE82EE>The Open Diary.</FONT></A>
+<FONT FACE="MS Sans Serif", arial SIZE=1 COLOR=#EE82EE> All rights reserved.</FONT>
+</TD>
+</TR>
+</TABLE>
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</BODY>
+</HTML>
